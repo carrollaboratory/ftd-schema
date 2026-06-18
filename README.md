@@ -29,7 +29,7 @@ from ftd_schema import resolve_schema_ref, resolve_schema_path
 
 version_dir = resolve_schema_path("data_dictionaries", "fhir", "v2.9.3")
 csv_path = resolve_schema_ref(
-  path_or_url="https://github.com/org/repo/blob/main/src/schemas/data_dictionaries/fhir/v2.9.3/AccessPolicy-dd.csv"
+  path_or_url="https://github.com/org/repo/blob/main/src/ftd_schema/schemas/data_dictionaries/fhir/v2.9.3/AccessPolicy-dd.csv"
 )
 ```
 
@@ -47,12 +47,12 @@ schema_dir = resolve_schema_ref(
 
 # Local path mode -> directory
 schema_dir = resolve_schema_ref(
-  path_or_url="src/schemas/data_dictionaries/fhir/v2.9.3"
+  path_or_url="src/ftd_schema/schemas/data_dictionaries/fhir/v2.9.3"
 )
 
 # GitHub tree URL mode -> mapped to local clone directory
 schema_dir = resolve_schema_ref(
-  path_or_url="https://github.com/org/repo/tree/main/src/schemas/data_dictionaries/fhir/v2.9.3"
+  path_or_url="https://github.com/org/repo/tree/main/src/ftd_schema/schemas/data_dictionaries/fhir/v2.9.3"
 )
 
 # Optional: iterate all files
@@ -60,6 +60,23 @@ all_files = [p for p in schema_dir.rglob("*") if p.is_file()]
 ```
 
 All resolver helpers return a pathlib.Path.
+
+For advanced use, the `SchemaResolver` class exposes additional helpers:
+
+```python
+from ftd_schema import SchemaResolver
+
+resolver = SchemaResolver("data_dictionaries", "fhir")
+
+# Load a Python schema module (file_formats with schema.py only)
+schema_module = resolver.load_schema(version="v1.0")
+
+# List stable, non-deprecated versions
+stable = resolver.get_stable_versions()
+
+# Read raw manifest data
+manifest = resolver.get_manifest()
+```
 
 
 ```python
@@ -110,7 +127,7 @@ generated directories like project/data-dictionary.
 ## Common Arguments
 
 - --schema-type: One of data_dictionaries, file_formats.
-- --schema-name: Bundle name under src/schemas/<schema-type>/.
+- --schema-name: Bundle name under src/ftd_schema/schemas/<schema-type>/.
 - --tag: Destination version directory and manifest version (stable tags only).
 - --zip-file: Local zip artifact path.
 - --zip-url: Remote artifact URL.
