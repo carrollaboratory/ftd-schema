@@ -12,8 +12,9 @@ versions:
     status: stable
     breaking_changes: []
     notes: |
-      Explicit tag-aligned directory for Access CDM data dictionary files.
-      Contains CSV table dictionaries and _access_study.yaml.
+      - Initial release of include access after refactor related to the common-data-model.
+      - This release includes include access data dictionaries and commonDM dds.
+      - include-access-model repo is not setup with the release artifacts at this time, therefore, the data dictionaries were placed manually.
 
 current_tag: "v1.0"
 current_version: "v1.0"
