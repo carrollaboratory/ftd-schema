@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+subject_id,INLCUDE Global ID for the Subject,string,,,,,
+sex,Sex of Participant,enumeration,,,,female=Female;male=Male;other=Other;unknown=Unknown,
+ethnicity,Ethnicity of Participant,enumeration,,,,hispanic_or_latino=Hispanic or Latino;not_hispanic_or_latino=Not Hispanic or Latino;prefer_not_to_answer=Prefer not to answer;unknown=Unknown,
+down_syndrome_status,Down Syndrome status of participant,enumeration,,,,d21=Disomy 21 (euploid);t21=Trisomy 21 (Down syndrome),
+age_at_last_vital_status,Age in days when participant's vital status was last recorded,integer,,,UCUM:d,,
+vital_status,Whether participant is alive or dead,enumeration,,,,dead=Dead;alive=Alive,
+age_at_first_engagement,"Age in days of Participant at first recorded study event (enrollment, visit, observation, sample collection, survey completion, etc.). Age at enrollment is preferred, if available.",integer,,,UCUM:d,,

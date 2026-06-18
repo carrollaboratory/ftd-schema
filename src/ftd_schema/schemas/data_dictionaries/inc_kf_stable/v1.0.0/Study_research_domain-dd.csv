@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+Study_study_id,Autocreated FK slot,string,,,,,Foreign Key: Study.study_id
+research_domain,"Main research domain(s) of the study, other than Down syndrome",enumeration,,,,behavior_and_behavior_mechanisms=Behavior and Behavior Mechanisms;congenital_heart_defects=Congenital Heart Defects;immune_system_diseases=Immune System Diseases;hematologic_diseases=Hematologic Diseases;neurodevelopment=Neurodevelopment;sleep_wake_disorders=Sleep Wake Disorders;all_co_occurring_conditions=All Co-occurring Conditions;physical_fitness=Physical Fitness;other=Other,

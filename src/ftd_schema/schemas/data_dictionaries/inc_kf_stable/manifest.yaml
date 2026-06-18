@@ -1,9 +1,9 @@
 ---
 schema_type: data_dictionaries
-schema_name: access
-description: Access CDM data dictionary bundle
+schema_name: inc_kf_stable
+description: Include KF Stable CDM data dictionary
 repository: ftd-schema
-owner: ftd
+owner: inc_kf
 
 versions:
   - tag: "v1.0.0"
@@ -12,10 +12,7 @@ versions:
     status: stable
     breaking_changes: []
     notes: |
-      - Initial release of include access after refactor related to the common-data-model.
-      - This release includes include access data dictionaries and commonDM dds.
-      - include-access-model repo is not setup with the release artifacts at this time, therefore, the data dictionaries were placed manually.
-
+      - No external repo exists for this data model, therefore, the dds were placed manually.
 current_tag: "v1.0.0"
 current_version: "v1.0.0"
 current_stable_tag: "v1.0.0"

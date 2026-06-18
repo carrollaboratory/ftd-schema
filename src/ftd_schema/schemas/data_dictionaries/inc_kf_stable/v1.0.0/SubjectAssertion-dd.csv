@@ -1,0 +1,12 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+assertion_id,INLCUDE Global ID for the Assertion,string,,,,,
+subject_id,INLCUDE Global ID for the Subject,string,,,,,
+assertion_provenance,The original source of this assertion,enumeration,,,,"medical_record=Data obtained from a medical record;investigator_assessment=Data obtained by examination, interview, etc. with investigator;participant_or_caregiver_report=Data obtained from survey, questionnaire, etc. filled out by participant or caregiver;other=Data obtained from other source, such as tissue bank",
+age_at_assertion,The age in days of the Subject when the assertion was made.,integer,,,UCUM:d,,
+age_at_event,"The age in days of the Subject at the time point which the assertion describes, | eg, age of onset or when a measurement was performed.",integer,,,UCUM:d,,
+age_at_resolution,The age in days of the Subject when the asserted state was resolved.,integer,,,UCUM:d,,
+concept_source,The source text yielding the standardized concept.,string,,,,,
+value_number,The numeric value of the assertion.,number,,,,,
+value_source,The source text yielding the value.,string,,,,,
+value_units,The structured term defining the units of the value.,string,,,,,Foreign Key: Concept.concept_curie
+value_units_source,The source text yielding the value's units.,string,,,,,

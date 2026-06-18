@@ -1,0 +1,6 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+id,,integer,,,,,
+name,Name of the entity.,string,,,,,
+institution,Name of the institution this record is associated with.,string,,,,,
+invesitgator_title,"The title of the Investigator, eg, ""Assistant Professor""",string,,,,,
+email,An email address to reach the entity.,string,,,,,
