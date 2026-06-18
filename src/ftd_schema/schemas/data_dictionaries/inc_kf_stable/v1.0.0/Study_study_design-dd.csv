@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+Study_study_id,Autocreated FK slot,string,,,,,Foreign Key: Study.study_id
+study_design,"Overall design of study, including whether it is longitudinal and whether family members/unrelated controls are also enrolled",enumeration,,,,case_control=Case-Control;case_set=Case Set;control_set=Control Set;clinical_trial=Clinical Trial;cross_sectional=Cross-Sectional;family_twins_trios=Family/Twins/Trios;interventional=Interventional;longitudinal=Longitudinal;trial_readiness_study=Trial Readiness Study;tumor_vs_matched_normal=Tumor vs Matched Normal,
