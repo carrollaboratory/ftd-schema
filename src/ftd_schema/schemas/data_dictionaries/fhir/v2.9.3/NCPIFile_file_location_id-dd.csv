@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+NCPIFile_file_global_id,Autocreated FK slot,string,,,,,Foreign Key: NCPIFile.file_global_id
+file_location_id_file_location_id,Location details (this is not a global ID),string,,,,,Foreign Key: FileLocation.file_location_id

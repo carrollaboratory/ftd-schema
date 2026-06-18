@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+ResearchStudy_research_study_id,Autocreated FK slot,string,,,,,Foreign Key: ResearchStudy.research_study_id
+study_personnel_id,"Every study must have at least one Primary Contact defined. Additional personnel such as Primary Investigator(s), Administrator(s), Collaborator(s) or other roles may also be included. If there are no appropriate individuals who can serve as primary contact for a study, an organization may be provided.",string,,,,,Foreign Key: AssociatedParty.id

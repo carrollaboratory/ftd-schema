@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+ResearchStudy_research_study_id,Autocreated FK slot,string,,,,,Foreign Key: ResearchStudy.research_study_id
+study_condition,The primary focus(es) of the study. This is specific to the disease. MeSH terms are preferred.,string,,,,,

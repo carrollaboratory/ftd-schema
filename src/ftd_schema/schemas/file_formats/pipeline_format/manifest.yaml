@@ -1,0 +1,38 @@
+---
+schema_type: file_formats
+schema_name: pipeline_format
+description: Metadata schema for defining expected file structure for creating or validating FTD pipeline files
+repository: ftd-schema
+owner: ftd
+
+versions:
+  - tag: "v1.0"
+    directory: "v1.0"
+    version: "v1.0"
+    released: "2026-06-17"
+    status: stable
+    breaking_changes: []
+    notes: |
+      Initial release of pipeline format schema.
+      Defines structure for data dictionaries processed by FTD pipeline tools.
+      Supported data types: string, integer, number, boolean, enumeration, date
+      Includes validation for variable names, enumerations, numeric constraints.
+    deprecated: false
+
+current_tag: "v1.0"
+current_version: "v1.0"
+current_stable_tag: "v1.0"
+current_stable_version: "v1.0"
+
+compatibility:
+  tools:
+    - ftd-pipeline-utils
+    - deva
+    - kf-inc-injest
+  
+  tools_break_compatibility: []
+  tools_require_migration:
+    - ftd-pipeline-utils: "no migration needed for 1.0.0"
+
+# Schema resolution: tools fetch from src/schemas/file_formats/pipeline_format/{tag}/
+# Beta prerelease convention: use explicit tag-aligned dirs such as v1.1-beta.1

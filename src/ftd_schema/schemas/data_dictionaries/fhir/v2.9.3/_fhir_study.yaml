@@ -1,0 +1,102 @@
+model_name: fhir
+model_prefix: fhir
+format: ftd_dd
+data_dictionary:
+  AccessPolicy:
+    identifier: AccessPolicy-dd.csv
+  AccessPolicy_access_policy_code:
+    identifier: AccessPolicy_access_policy_code-dd.csv
+  AgeAt:
+    identifier: AgeAt-dd.csv
+  Aliquot:
+    identifier: Aliquot-dd.csv
+  Aliquot_external_id:
+    identifier: Aliquot_external_id-dd.csv
+  AssociatedParty:
+    identifier: AssociatedParty-dd.csv
+  AssociatedParty_classifier:
+    identifier: AssociatedParty_classifier-dd.csv
+  AssociatedParty_period_id:
+    identifier: AssociatedParty_period_id-dd.csv
+  Family:
+    identifier: Family-dd.csv
+  FamilyRelationship:
+    identifier: FamilyRelationship-dd.csv
+  Family_external_id:
+    identifier: Family_external_id-dd.csv
+  FileLocation:
+    identifier: FileLocation-dd.csv
+  FileMetaData:
+    identifier: FileMetaData-dd.csv
+  FileMetaData_samples:
+    identifier: FileMetaData_samples-dd.csv
+  HasExternalId_external_id:
+    identifier: HasExternalId_external_id-dd.csv
+  Institution:
+    identifier: Institution-dd.csv
+  Institution_external_id:
+    identifier: Institution_external_id-dd.csv
+  NCPIFile:
+    identifier: NCPIFile-dd.csv
+  NCPIFile_external_id:
+    identifier: NCPIFile_external_id-dd.csv
+  NCPIFile_file_location_id:
+    identifier: NCPIFile_file_location_id-dd.csv
+  NCPIFile_file_meta_data_id:
+    identifier: NCPIFile_file_meta_data_id-dd.csv
+  Participant:
+    identifier: Participant-dd.csv
+  ParticipantAssertion:
+    identifier: ParticipantAssertion-dd.csv
+  Participant_external_id:
+    identifier: Participant_external_id-dd.csv
+  Participant_race:
+    identifier: Participant_race-dd.csv
+  Participant_sample_id:
+    identifier: Participant_sample_id-dd.csv
+  Period:
+    identifier: Period-dd.csv
+  Person:
+    identifier: Person-dd.csv
+  Person_participant_id:
+    identifier: Person_participant_id-dd.csv
+  Practitioner:
+    identifier: Practitioner-dd.csv
+  PractitionerRole:
+    identifier: PractitionerRole-dd.csv
+  Practitioner_external_id:
+    identifier: Practitioner_external_id-dd.csv
+  RelativeDateTime:
+    identifier: RelativeDateTime-dd.csv
+  ResearchStudy:
+    identifier: ResearchStudy-dd.csv
+  ResearchStudyCollection:
+    identifier: ResearchStudyCollection-dd.csv
+  ResearchStudyCollection_external_id:
+    identifier: ResearchStudyCollection_external_id-dd.csv
+  ResearchStudyCollection_label:
+    identifier: ResearchStudyCollection_label-dd.csv
+  ResearchStudyCollection_research_study_collection_member_id:
+    identifier: ResearchStudyCollection_research_study_collection_member_id-dd.csv
+  ResearchStudy_external_id:
+    identifier: ResearchStudy_external_id-dd.csv
+  ResearchStudy_study_acknowledgement:
+    identifier: ResearchStudy_study_acknowledgement-dd.csv
+  ResearchStudy_study_condition:
+    identifier: ResearchStudy_study_condition-dd.csv
+  ResearchStudy_study_design:
+    identifier: ResearchStudy_study_design-dd.csv
+  ResearchStudy_study_focus:
+    identifier: ResearchStudy_study_focus-dd.csv
+  ResearchStudy_study_personnel:
+    identifier: ResearchStudy_study_personnel-dd.csv
+  ResearchSubject:
+    identifier: ResearchSubject-dd.csv
+  Sample:
+    identifier: Sample-dd.csv
+  Sample_external_id:
+    identifier: Sample_external_id-dd.csv
+  Sample_processing:
+    identifier: Sample_processing-dd.csv
+  StudyMembership:
+    identifier: StudyMembership-dd.csv

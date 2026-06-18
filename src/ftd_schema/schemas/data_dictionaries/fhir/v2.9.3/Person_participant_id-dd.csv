@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+Person_person_id,Autocreated FK slot,string,,,,,Foreign Key: Person.person_id
+participant_id_participant_id,The Global ID for the Participant,string,,,,,Foreign Key: Participant.participant_id

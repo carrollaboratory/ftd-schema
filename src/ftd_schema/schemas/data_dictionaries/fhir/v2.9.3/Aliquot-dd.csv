@@ -1,0 +1,9 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+aliquot_id,Aliquot Global ID,string,,,,,
+availability_status,Can this Sample be requested for further analysis?,enumeration,,,,available=Specimen is currently available;unavailable=Specimen is currently unavailable,
+volume,What is the volume of the Aliquot?,number,,,,,
+volume_units,Units associated with the volume (ucum),string,,,,,
+concentration,What is the concentration of the analyte in the Aliquot?,string,,,,,
+sample_id,Sample Global ID,string,,,,,Foreign Key: Sample.sample_id
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

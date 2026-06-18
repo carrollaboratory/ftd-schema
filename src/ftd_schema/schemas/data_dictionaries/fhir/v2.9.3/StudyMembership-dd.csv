@@ -1,0 +1,4 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+study_membership_id,Study Membership Global ID (group),string,,,,,
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

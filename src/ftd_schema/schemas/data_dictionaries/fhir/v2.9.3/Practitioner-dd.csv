@@ -1,0 +1,10 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+practitioner_id,The Global ID for the PractitionerRole that links a Practitioner to their Institution.,string,,,,,
+name,Name of the entity.,string,,,,,
+email,An email address to reach the entity.,string,,,,,
+institution_id,The institution this record is associated with.,string,,,,,Foreign Key: Institution.institution_id
+practitioner_role_id,Global ID for this record,string,,,,,Foreign Key: PractitionerRole.practitioner_role_id
+description,More details associated with the given resource,string,,,,,
+practitioner_title,"The title of the Investigator, eg, ""Assistant Professor""",string,,,,,
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

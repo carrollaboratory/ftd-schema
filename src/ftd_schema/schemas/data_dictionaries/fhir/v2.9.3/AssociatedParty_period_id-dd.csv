@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+AssociatedParty_id,Autocreated FK slot,string,,,,,Foreign Key: AssociatedParty.id
+period_id_id,Reference to a time period which defines a Start and End datatime period.,integer,,,,,Foreign Key: Period.id

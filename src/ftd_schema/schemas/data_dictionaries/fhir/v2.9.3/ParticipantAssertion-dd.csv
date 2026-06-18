@@ -1,0 +1,23 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+participant_assertion_id,Participant Assertion Global ID,string,,,,,
+participant_id,The Global ID for the Participant,string,,,,,Foreign Key: Participant.participant_id
+age_at_event,The date or age at which the event relating to this assertion occured.,string,,,,,Foreign Key: AgeAt.id
+age_at_assertion,The date or age at which this condition is being asserted.,string,,,,,Foreign Key: AgeAt.id
+age_at_onset,"The age of onset for this condition. Could be expressed with a term, an age, or an age range.",string,,,,,Foreign Key: AgeAt.id
+age_at_resolution,"The age at which this condition was resolved, abated, or cured. Should be left empty in cases of current active status. Could be expressed with a term, an age, or an age range.",string,,,,,Foreign Key: AgeAt.id
+entity_asserter,"Who recorded this assertion about the Participant? This can support understanding the differences between self-report, doctor, trained research staff.",enumeration,,,,self_report=The participant reported the assertion;doctor=Physician;staff=Trained research staff,
+other_condition_modifiers,"Any additional modifiers for this condition, such as severity.",string,,,,,
+assertion_type,Describe the type of assertion being made.,enumeration,,,,"phenotypic_feature=This is a phenotypic feature;disease=Disease;comorbidity=Comorbidity;histology=Histology;clinical_finding=Clinical Finding;ehr_billing_code=From an EHR billing record, which may indicate only investigation into a possible diagnosis.;measurement=A measurement of some feature, eg, height or glucose.",
+assertion_code,The structured term defining the meaning of the assertion.,string,,,,,
+assertion_text,Detailed description / free text about this assertion.,string,,,,,
+assertion_source,"Where or how was this this assertion about the Participant recorded? This can support understanding the differences between surveys, automated EHR extraction, manual chart abstraction, etc.",string,,,,,
+value_code,Value as code,string,,,,,
+value_string,Value as string,string,,,,,
+value_number,Value as numer,number,,,,,
+value_units,The structured term defining the units of the value (ucum).,string,,,,,
+body_site,"Location information for the observation, including site, laterality, and other qualifiers as appropriate. Multiple observations may be required if the same assertion is made in many locations, or complete location details can be provided in an NCPI Condition Summary.",string,,,,,
+body_location,Any location qualifiers,string,,,,,
+body_laterality,Laterality information for the condition site,string,,,,,
+cancer_stage,Cancer staging information,string,,,,,
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

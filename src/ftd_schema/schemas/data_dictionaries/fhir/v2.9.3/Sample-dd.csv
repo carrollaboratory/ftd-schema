@@ -1,0 +1,16 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+sample_id,Sample Global ID,string,,,,,
+parent_sample_id,Sample Global ID associated with the parent sample,string,,,,,Foreign Key: Sample.sample_id
+participant_id,The Global ID for the Participant,string,,,,,Foreign Key: Participant.participant_id
+sample_type,The type of material of which this Sample is comprised,string,,,,,
+age_at_collection,"The age at which this biospecimen was collected. Could be expressed with a term, an age, or an age range.",string,,,,,Foreign Key: AgeAt.id
+collection_method,The approach used to collect the biospecimen ([LOINC](https://loinc.org)),string,,,,,
+collection_site,The location of the specimen collection,string,,,,,
+spatial_qualifier,Any spatial/location qualifiers,string,,,,,
+laterality,Laterality information for the site,string,,,,,
+availability_status,Can this Sample be requested for further analysis?,enumeration,,,,available=Specimen is currently available;unavailable=Specimen is currently unavailable,
+storage_method,"How is the Sample stored, eg, Frozen or with additives (e.g. https://terminology.hl7.org/5.3.0/ValueSet-v2-0493.html)",string,,,,,
+quantity,The total quantity of the specimen,number,,,,,
+quantity_units,Units associated with the quantity (ucum),string,,,,,
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

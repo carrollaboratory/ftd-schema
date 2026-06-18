@@ -1,0 +1,6 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+value_type,Age Value Type,enumeration,,,,"age=Age (must also be annotated with age units);code=Age as Code (ages will be provided as coded values);age_range=Age expressed as a range (relative date/time);date=Rather than an age, we have an actual date for the event's occurence",
+relative_date_time_id,Age either numeric value or range,string,,,,,Foreign Key: RelativeDateTime.id
+age_code,Age expressed as an enumerated value representing an age category,string,,,,,
+as_date,Event Date (rather than age),string,,,,,
+id,Unique Identifier for a table entry. This is probably not the Global ID,string,,,,,

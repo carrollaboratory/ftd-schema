@@ -1,0 +1,7 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+research_study_id,The Global ID for the Research Study.,string,,,,,
+study_title,Research Study's formal title.,string,,,,,
+parent_study_id,ID For Parent Study if this is a substudy,string,,,,,Foreign Key: ResearchStudy.research_study_id
+description,More details associated with the given resource,string,,,,,
+study_status,The current state of the study.,enumeration,,,,active=Study is opened for accrual.;administratively_completed=Study is completed prematurely and will not resume; patients are no longer examined nor treated.;approved=Approved;closed_to_accrual=Closed to Accrual;closed_to_accrual_and_intervention=Closed to Accrual and Intervention;completed=Completed;disapproved=Disapproved;in_review=In Review;temporarily_closed_to_accrual=Temporarily Closed to Accrual;temporarily_closed_to_accrual_and_intervention=Temporarily Closed to Accrual and Intervention;withdrawn=Withdrawn,
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id

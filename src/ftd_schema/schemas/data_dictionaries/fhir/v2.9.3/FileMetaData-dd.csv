@@ -1,0 +1,16 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+file_meta_data_id,Representation of file metadata for NCPI,string,,,,,
+meta_data_type,Clarify which type of meta data this file has recorded,enumeration,,,,bam_cram=Bam or Cram file;fastq=FASTQ File;maf=MAF (Somatic Mutation);proteomics=Proteomics file;vcf=GC or gVCF file,
+assay_strategy,"e.g., Whole Genome Sequencing",string,,,,,
+platform_instrument,"e.g., Illumina HiSeq2000",string,,,,,
+library_prep,"e.g., polyA",string,,,,,
+library_selection,...,string,,,,,
+strandedness,"stranded, unstranded",string,,,,,
+target_region,Target region,string,,,,,
+is_paired_end,"True, False",string,,,,,
+adaptor_trimmed,"True, False",string,,,,,
+reference_genome,"GRCh37, GRCh38",string,,,,,
+workflow_type,"e.g., alignment, somatic",string,,,,,
+workflow_tool,"e.g., BAM-MEM, GATK-Haplotype Caller",string,,,,,
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

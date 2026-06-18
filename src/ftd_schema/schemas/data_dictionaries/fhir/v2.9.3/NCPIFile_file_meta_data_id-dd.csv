@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+NCPIFile_file_global_id,Autocreated FK slot,string,,,,,Foreign Key: NCPIFile.file_global_id
+file_meta_data_id_file_meta_data_id,Representation of file metadata for NCPI,string,,,,,Foreign Key: FileMetaData.file_meta_data_id

@@ -1,0 +1,5 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+offset,"The point after the target being described. For ranges, this can be used for the starting point",integer,,,,,
+offset_end,The end of a relative date/time range,integer,,,,,
+offset_type,"What is the datatype associated with the offset (days, years, etc)",enumeration,,,,days=The offset is represented in days;years=The offset is represented in Years,
+id,Unique Identifier for a table entry. This is probably not the Global ID,string,,,,,

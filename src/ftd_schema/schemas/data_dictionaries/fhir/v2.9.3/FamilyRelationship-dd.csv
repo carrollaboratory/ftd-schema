@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+family_relationship_id,Family Relationship Global ID,string,,,,,
+patient_id,The child from the parent-child relationship,string,,,,,Foreign Key: Participant.participant_id
+relative_id,The parent from the parent-child relationship,string,,,,,Foreign Key: Participant.participant_id
+relationship,The role the relative (parent) fills with respect to the patient (child) for this relationship.,enumeration,,,,"mother=The relative is the biological mother of the patient.;father=The relative is the biological father of the patient.;monozygotic_twin=The relative and patient are monozygotic twins;polyzygotic_twin=The relative and patient are polyzygotic twins;twin=The relative and patient are twins, but no further clarification is available (always use the more specific form when possible);full_sibling=The relative and child both share the same biological mother and father;half_sibling=The relative and child only share one biological parent;sibling=The relative share at least one biological parent, but there isn't enough information to confirm more then that.",
+knowledge_source,The source for the reltionship term,enumeration,,,,"traditional=The knowledge comes from traditional sources like a form filled out by a patient or information copied from an external traditional source like government records.;inferred=The knowledge is inferred from indirect evidence. For example, the existence of one patient's mother can be inferred from the existence of the patient.",
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

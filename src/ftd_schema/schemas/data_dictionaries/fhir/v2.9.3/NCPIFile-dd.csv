@@ -1,0 +1,13 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+participant_id,The Global ID for the Participant,string,,,,,Foreign Key: Participant.participant_id
+file_format,The file format used ([EDAM](http://edamontology.org) where possible),string,,,,,
+file_size,"The size of the file, e.g., in bytes.",number,,,,,
+file_size_unit,Units associated with the file_size value (ucum),string,,,,,
+content_version,Version of the file content,string,,,,,
+file_type,"The type of data contained in this file. Should be as detailed as possible, e.g., Whole Exome Variant Calls.",string,,,,,
+file_hash,Value of hashing the file,string,,,,,
+file_hash_type,"Algorithm used to calculate the hash (and size, where applicable)",string,,,,,
+description,More details associated with the given resource,string,,,,,
+file_global_id,File Global ID,string,,,,,
+access_policy_id,Access Policy Global ID,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+research_study_id,The Global ID for the Research Study.,string,,,,,Foreign Key: ResearchStudy.research_study_id

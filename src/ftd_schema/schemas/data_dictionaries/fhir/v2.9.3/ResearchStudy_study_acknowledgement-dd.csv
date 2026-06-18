@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+ResearchStudy_research_study_id,Autocreated FK slot,string,,,,,Foreign Key: ResearchStudy.research_study_id
+study_acknowledgement,"Any attribution or acknowledgements relevant to the study. This can include but is not limited to funding sources, organizational affiliations or sponsors.",string,,,,,

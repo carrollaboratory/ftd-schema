@@ -1,0 +1,29 @@
+---
+schema_type: data_dictionaries
+schema_name: access
+description: Access CDM data dictionary bundle
+repository: ftd-schema
+owner: ftd
+
+versions:
+  - tag: "v1.0"
+    directory: "v1.0"
+    released: "2026-06-17"
+    status: stable
+    breaking_changes: []
+    notes: |
+      Explicit tag-aligned directory for Access CDM data dictionary files.
+      Contains CSV table dictionaries and _access_study.yaml.
+
+current_tag: "v1.0"
+current_version: "v1.0"
+current_stable_tag: "v1.0"
+current_stable_version: "v1.0"
+
+compatibility:
+  tools:
+    - ftd-pipeline-utils
+    - deva
+    - kf-inc-injest
+
+# Beta prerelease convention: use explicit tag-aligned dirs such as v1.1-beta.1

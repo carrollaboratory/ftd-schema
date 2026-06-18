@@ -1,0 +1,10 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+access_policy_id,Access policy communicates the limitations and/or requirements that define how a user may gain access to a particular set of data.,string,,,,,
+description,More details associated with the given resource,string,,,,,
+data_access_type,Type of access restrictions on file downloads ( open | registered | controlled ),enumeration,,,,open=Open Access;registered=Registered;controlled=Controlled;gsr_restricted=GSR Restricted;gsr_allowed=GSR Allowed,
+website,"URL describing the entity this represents. This can include a formal website, such as the Entity's website, or to an online document describing the entity.",string,,,,,
+consent_scope,Which of the four areas this resource covers (extensible),enumeration,,,,adr=Advanced Care Directive;research=Research;patient_privacy=Patient Privacy;treatment=Treatment,
+disease_limitation,Disease Use Limitations,string,,,,,
+status,Indicates the state of the consent.,enumeration,,,,draft=Draft;proposed=Proposed;active=Active;rejected=Rejected;inactive=Inactive;entered_in_error=Entered in Error,
+period_start,Start attribute for a FHIR period data type.,string,,,,,
+period_end,End attribute for a FHIR period data type.,string,,,,,

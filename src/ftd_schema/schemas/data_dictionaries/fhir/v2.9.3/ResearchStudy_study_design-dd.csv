@@ -1,0 +1,3 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+ResearchStudy_research_study_id,Autocreated FK slot,string,,,,,Foreign Key: ResearchStudy.research_study_id
+study_design,Study Design and Study Type ([example ValueSet can be found here](https://hl7.org/fhir/valueset-study-design.html)),string,,,,,
