@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/ftd_schema/_version.py"
+fallback_version = "0.0.dev0"
+
+[project]
+name = "ftd-schema"
+dynamic = ["version"]
+description = "Schema resolver and versioned schema bundles for FTD tools"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["schema_resolver", "import_release"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ftd_schema*"]
+
+[tool.setuptools.package-data]
+ftd_schema = ["schemas/**/*"]
