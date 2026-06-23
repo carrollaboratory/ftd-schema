@@ -1,0 +1,22 @@
+---
+schema_type: file_formats
+schema_name: mapdragon_table
+description: Metadata schema for defining expected file structure for importing data dictionaries into the MapDragon table
+repository: ftd-schema
+owner: ftd
+
+versions:
+  - tag: "v1.0.0"
+    directory: "v1.0.0"
+    version: "v1.0.0"
+    released: "2026-06-23"
+    status: stable
+    breaking_changes: []
+    notes: |
+      Initial release of MapDragon table import schema.
+      Defines structure for data dictionaries loaded directly into the MapDragon table.
+    deprecated: false
+
+compatibility:
+  tools:
+    - mapdragon

@@ -15,14 +15,9 @@ versions:
       - Initial release of include access after refactor related to the common-data-model.
       - This release includes include access data dictionaries and commonDM dds.
       - include-access-model repo is not setup with the release artifacts at this time, therefore, the data dictionaries were placed manually.
-
-current_tag: "v1.0.0"
-current_version: "v1.0.0"
-current_stable_tag: "v1.0.0"
-current_stable_version: "v1.0.0"
+    deprecated: false
 
 compatibility:
   tools:
     - include-dbt-sandbox
 
-# Beta prerelease convention: use explicit tag-aligned dirs such as v1.1-beta.1

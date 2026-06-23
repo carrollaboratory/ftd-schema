@@ -12,7 +12,3 @@ versions:
   breaking_changes: []
   notes: Imported from release artifact for v2.9.3.
   deprecated: false
-current_tag: v2.9.3
-current_version: v2.9.3
-current_stable_tag: v2.9.3
-current_stable_version: v2.9.3
