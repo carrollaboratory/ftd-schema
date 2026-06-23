@@ -4,15 +4,11 @@ description: FHIR CDM data dictionary bundle
 repository: ftd-schema
 owner: ftd
 versions:
-- tag: v2.9.3
-  directory: v2.9.3
-  version: v2.9.3
+- tag: v0.9.3
+  directory: v0.9.3
+  version: v0.9.3
   released: '2026-06-18'
   status: stable
   breaking_changes: []
-  notes: Imported from release artifact for v2.9.3.
+  notes: Imported from release artifact for v0.9.3.
   deprecated: false
-current_tag: v2.9.3
-current_version: v2.9.3
-current_stable_tag: v2.9.3
-current_stable_version: v2.9.3

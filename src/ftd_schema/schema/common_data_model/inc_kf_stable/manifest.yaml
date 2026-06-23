@@ -13,13 +13,8 @@ versions:
     breaking_changes: []
     notes: |
       - No external repo exists for this data model, therefore, the dds were placed manually.
-current_tag: "v1.0.0"
-current_version: "v1.0.0"
-current_stable_tag: "v1.0.0"
-current_stable_version: "v1.0.0"
+    deprecated: false
 
 compatibility:
   tools:
     - include-dbt-sandbox
-
-# Beta prerelease convention: use explicit tag-aligned dirs such as v1.1-beta.1

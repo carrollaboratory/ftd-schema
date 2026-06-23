@@ -1,0 +1,113 @@
+table_name,variable_name,enumeration_code,enumeration_display,enumeration_title,enumeration_meaning,enumeration_system,enumeration_group
+Subject,subject_type,participant,"Study participant with consent, assent, or waiver of consent.",,,https://anvilproject.github.io/acr-harmonized-data-model/EnumSubjectType,EnumSubjectType
+Subject,subject_type,non_participant,"An individual associated with a study who was not explictly consented, eg, the subject of a reported family history.",,,https://anvilproject.github.io/acr-harmonized-data-model/EnumSubjectType,EnumSubjectType
+Subject,subject_type,cell_line,Cell Line,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumSubjectType,EnumSubjectType
+Subject,subject_type,animal_model,Animal model,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumSubjectType,EnumSubjectType
+Subject,subject_type,group,A group of individuals or entities.,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumSubjectType,EnumSubjectType
+Subject,subject_type,other,A different entity type- ideally this will be resolved!,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumSubjectType,EnumSubjectType
+Demographics,sex,female,Female,,NCIT:C16576,https://anvilproject.github.io/acr-harmonized-data-model/EnumSex,EnumSex
+Demographics,sex,male,Male,,NCIT:C20197,https://anvilproject.github.io/acr-harmonized-data-model/EnumSex,EnumSex
+Demographics,sex,other,Other,,NCIT:C17649,https://anvilproject.github.io/acr-harmonized-data-model/EnumSex,EnumSex
+Demographics,sex,unknown,Unknown,,NCIT:C17998,https://anvilproject.github.io/acr-harmonized-data-model/EnumSex,EnumSex
+Demographics,ethnicity,hispanic_or_latino,Hispanic or Latino,,NCIT:C17459,https://anvilproject.github.io/acr-harmonized-data-model/EnumEthnicity,EnumEthnicity
+Demographics,ethnicity,not_hispanic_or_latino,Not Hispanic or Latino,,NCIT:C41222,https://anvilproject.github.io/acr-harmonized-data-model/EnumEthnicity,EnumEthnicity
+Demographics,ethnicity,prefer_not_to_answer,Prefer not to answer,,NCIT:C132222,https://anvilproject.github.io/acr-harmonized-data-model/EnumEthnicity,EnumEthnicity
+Demographics,ethnicity,unknown,Unknown,,NCIT:C17998,https://anvilproject.github.io/acr-harmonized-data-model/EnumEthnicity,EnumEthnicity
+Demographics,down_syndrome_status,d21,Disomy 21 (euploid),D21,PATO:0001393,https://anvilproject.github.io/acr-harmonized-data-model/EnumDownSyndromeStatus,EnumDownSyndromeStatus
+Demographics,down_syndrome_status,t21,Trisomy 21 (Down syndrome),T21,MONDO:0008608,https://anvilproject.github.io/acr-harmonized-data-model/EnumDownSyndromeStatus,EnumDownSyndromeStatus
+Demographics,vital_status,dead,Dead,,NCIT:C28554,https://anvilproject.github.io/acr-harmonized-data-model/EnumVitalStatus,EnumVitalStatus
+Demographics,vital_status,alive,Alive,,NCIT:C37987,https://anvilproject.github.io/acr-harmonized-data-model/EnumVitalStatus,EnumVitalStatus
+Family,family_type,control_only,Control Only,Control-only,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFamilyType,EnumFamilyType
+Family,family_type,duo,Duo,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFamilyType,EnumFamilyType
+Family,family_type,proband_only,Proband Only,Proband-only,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFamilyType,EnumFamilyType
+Family,family_type,trio,Trio (2 parents and affected child),Trio,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFamilyType,EnumFamilyType
+Family,family_type,trio_plus,2 Parents and 2 or more children,Trio+,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFamilyType,EnumFamilyType
+Family,consanguinity,not_suspected,Not suspected,not-suspected,snomed_ct:428263003,https://anvilproject.github.io/acr-harmonized-data-model/EnumConsanguinityAssertion,EnumConsanguinityAssertion
+Family,consanguinity,suspected,Suspected,suspected,snomed_ct:415684004,https://anvilproject.github.io/acr-harmonized-data-model/EnumConsanguinityAssertion,EnumConsanguinityAssertion
+Family,consanguinity,known_present,Known Present,known-present,snomed_ct:410515003,https://anvilproject.github.io/acr-harmonized-data-model/EnumConsanguinityAssertion,EnumConsanguinityAssertion
+Family,consanguinity,unknown,Unknown,unknown,snomed_ct:261665006,https://anvilproject.github.io/acr-harmonized-data-model/EnumConsanguinityAssertion,EnumConsanguinityAssertion
+SubjectAssertion,assertion_provenance,medical_record,Data obtained from a medical record,Medical Record,,https://anvilproject.github.io/acr-harmonized-data-model/EnumAssertionProvenance,EnumAssertionProvenance
+SubjectAssertion,assertion_provenance,investigator_assessment,"Data obtained by examination, interview, etc. with investigator",Investigator Assessment,,https://anvilproject.github.io/acr-harmonized-data-model/EnumAssertionProvenance,EnumAssertionProvenance
+SubjectAssertion,assertion_provenance,participant_or_caregiver_report,"Data obtained from survey, questionnaire, etc. filled out by participant or caregiver",Participant or Caregiver Report,,https://anvilproject.github.io/acr-harmonized-data-model/EnumAssertionProvenance,EnumAssertionProvenance
+SubjectAssertion,assertion_provenance,other,"Data obtained from other source, such as tissue bank",Other,,https://anvilproject.github.io/acr-harmonized-data-model/EnumAssertionProvenance,EnumAssertionProvenance
+Sample,availablity_status,available,Biospecimen is Available,Available,ig2_biospecimen_availability:available,https://anvilproject.github.io/acr-harmonized-data-model/EnumAvailabilityStatus,EnumAvailabilityStatus
+Sample,availablity_status,unavailable,Biospecimen is Unavailable,Unavailable,ig2_biospecimen_availability:unavailable,https://anvilproject.github.io/acr-harmonized-data-model/EnumAvailabilityStatus,EnumAvailabilityStatus
+Aliquot,availablity_status,available,Biospecimen is Available,Available,ig2_biospecimen_availability:available,https://anvilproject.github.io/acr-harmonized-data-model/EnumAvailabilityStatus,EnumAvailabilityStatus
+Aliquot,availablity_status,unavailable,Biospecimen is Unavailable,Unavailable,ig2_biospecimen_availability:unavailable,https://anvilproject.github.io/acr-harmonized-data-model/EnumAvailabilityStatus,EnumAvailabilityStatus
+File,data_category,unharmonized_demographic_clinical_data,Unharmonized Demographic/Clinical Data,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,harmonized_demographic_clinical_data,Harmonized Demographic/Clinical Data,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,genomics,Genomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,transcriptomics,Transcriptomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,epigenomics,Epigenomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,proteomics,Proteomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,metabolomics,Metabolomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,cognitive_behavioral,Cognitive/Behavioral,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,immune_profiling,Immune Profiling,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,imaging,Imaging,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,microbiome,Microbiome,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,fitness,Fitness,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,physical_activity,Physical Activity,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,other,Other,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+File,data_category,sleep_study,Sleep Study,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+FileHash,hash_type,md5,MD5,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFileHashType,EnumFileHashType
+FileHash,hash_type,etag,ETag,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFileHashType,EnumFileHashType
+FileHash,hash_type,sha1,SHA-1,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumFileHashType,EnumFileHashType
+Study_program,program,include,INCLUDE,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumProgram,EnumProgram
+Study_program,program,kf,KF,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumProgram,EnumProgram
+Study_program,program,other,Other,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumProgram,EnumProgram
+StudyMetadata_participant_lifespan_stage,participant_lifespan_stage,fetal,Before birth,Fetal,,https://anvilproject.github.io/acr-harmonized-data-model/EnumParticipantLifespanStage,EnumParticipantLifespanStage
+StudyMetadata_participant_lifespan_stage,participant_lifespan_stage,neonatal,0-28 days old,Neonatal,,https://anvilproject.github.io/acr-harmonized-data-model/EnumParticipantLifespanStage,EnumParticipantLifespanStage
+StudyMetadata_participant_lifespan_stage,participant_lifespan_stage,pediatric,Birth-17 years old,Pediatric,,https://anvilproject.github.io/acr-harmonized-data-model/EnumParticipantLifespanStage,EnumParticipantLifespanStage
+StudyMetadata_participant_lifespan_stage,participant_lifespan_stage,adult,18+ years old,Adult,,https://anvilproject.github.io/acr-harmonized-data-model/EnumParticipantLifespanStage,EnumParticipantLifespanStage
+StudyMetadata_study_design,study_design,case_control,Case-Control,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,case_set,Case Set,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,control_set,Control Set,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,clinical_trial,Clinical Trial,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,cross_sectional,Cross-Sectional,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,family_twins_trios,Family/Twins/Trios,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,interventional,Interventional,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,longitudinal,Longitudinal,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,trial_readiness_study,Trial Readiness Study,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_study_design,study_design,tumor_vs_matched_normal,Tumor vs Matched Normal,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumStudyDesign,EnumStudyDesign
+StudyMetadata_clinical_data_source_type,clinical_data_source_type,medical_record,Data obtained directly from medical record,Medical Record,,https://anvilproject.github.io/acr-harmonized-data-model/EnumClinicalDataSourceType,EnumClinicalDataSourceType
+StudyMetadata_clinical_data_source_type,clinical_data_source_type,investigator_assessment,"Data obtained by examination, interview, etc. with investigator",Investigator Assessment,,https://anvilproject.github.io/acr-harmonized-data-model/EnumClinicalDataSourceType,EnumClinicalDataSourceType
+StudyMetadata_clinical_data_source_type,clinical_data_source_type,participant_or_caregiver_report,"Data obtained from survey, questionnaire, etc. filled out by participant or caregiver",Participant or Caregiver Report,,https://anvilproject.github.io/acr-harmonized-data-model/EnumClinicalDataSourceType,EnumClinicalDataSourceType
+StudyMetadata_clinical_data_source_type,clinical_data_source_type,other,"Data obtained from other source, such as tissue bank",Other,,https://anvilproject.github.io/acr-harmonized-data-model/EnumClinicalDataSourceType,EnumClinicalDataSourceType
+StudyMetadata_clinical_data_source_type,clinical_data_source_type,unknown,Unknown,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumClinicalDataSourceType,EnumClinicalDataSourceType
+StudyMetadata_data_category,data_category,unharmonized_demographic_clinical_data,Unharmonized Demographic/Clinical Data,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,harmonized_demographic_clinical_data,Harmonized Demographic/Clinical Data,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,genomics,Genomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,transcriptomics,Transcriptomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,epigenomics,Epigenomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,proteomics,Proteomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,metabolomics,Metabolomics,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,cognitive_behavioral,Cognitive/Behavioral,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,immune_profiling,Immune Profiling,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,imaging,Imaging,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,microbiome,Microbiome,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,fitness,Fitness,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,physical_activity,Physical Activity,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,other,Other,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_data_category,data_category,sleep_study,Sleep Study,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumDataCategory,EnumDataCategory
+StudyMetadata_research_domain,research_domain,behavior_and_behavior_mechanisms,Behavior and Behavior Mechanisms,,mesh:D001520,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,congenital_heart_defects,Congenital Heart Defects,,mesh:D006330,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,immune_system_diseases,Immune System Diseases,,mesh:D007154,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,hematologic_diseases,Hematologic Diseases,,mesh:D006402,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,neurodevelopment,Neurodevelopment,,mesh:D065886,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,sleep_wake_disorders,Sleep Wake Disorders,,mesh:D012893,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,all_co_occurring_conditions,All Co-occurring Conditions,,mesh:D013568,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,physical_fitness,Physical Fitness,,mesh:D010809,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+StudyMetadata_research_domain,research_domain,other,Other,,,https://anvilproject.github.io/acr-harmonized-data-model/EnumResearchDomain,EnumResearchDomain
+Demographics_race,race,american_indian_or_alaska_native,American Indian or Alaska Native,,NCIT:C41259,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,asian,Asian,,NCIT:C41260,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,black_or_african_american,Black or African American,,NCIT:C16352,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,more_than_one_race,More than one race,,NCIT:C67109,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,native_hawaiian_or_other_pacific_islander,Native Hawaiian or Other Pacific Islander,,NCIT:C41219,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,other,Other,,NCIT:C17649,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,white,White,,NCIT:C41261,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,prefer_not_to_answer,Prefer not to answer,,NCIT:C132222,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,unknown,Unknown,,NCIT:C17998,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,east_asian,UK only; do not use for US data,East Asian,NCIT:C161419,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,latin_american,UK only; do not use for US data,Latin American,NCIT:C126531,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,middle_eastern_or_north_african,UK only; do not use for US data,Middle Eastern or North African,NCIT:C43866,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
+Demographics_race,race,south_asian,UK only; do not use for US data,South Asian,NCIT:C41263,https://anvilproject.github.io/acr-harmonized-data-model/EnumRace,EnumRace
