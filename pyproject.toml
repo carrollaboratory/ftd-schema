@@ -25,4 +25,4 @@ where = ["src"]
 include = ["ftd_schema*"]
 
 [tool.setuptools.package-data]
-ftd_schema = ["schemas/**/*"]
+ftd_schema = ["schema/**/*"]
