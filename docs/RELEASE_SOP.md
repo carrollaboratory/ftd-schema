@@ -7,7 +7,7 @@ Procedure for versioning, tagging, and publishing schema releases.
 
 - Ensure all schema changes are committed to git
 - Decide which schemas have changed (they may have different new version numbers)
-- Use stable tags only for imports (example: `v2.9.3`)
+- Choose a version tag format appropriate for the release process (example: `v0.9.3`)
 
 ---
 
@@ -22,7 +22,7 @@ Don't update more than one schema at the same time.
 
 ### Step 2: Update the Manifest
 
-Edit `src/ftd_schema/schemas/file_formats/pipeline_format/manifest.yaml`:
+Edit `src/ftd_schema/schema/file_format/pipeline_format/manifest.yaml`:
 
 ```yaml
 versions:
@@ -47,12 +47,6 @@ versions:
       - Improved regex validation for enumerations
     deprecated: false
 
-current_tag: "v1.2.0"
-current_version: "v1.2.0"
-current_stable_tag: "v1.1.0"      # Point to tested stable
-current_stable_version: "v1.1.0"
-```
-
 
 ### Step 3: Commit all changes to a branch, when ready ask for a PR review.
 
@@ -67,29 +61,41 @@ Don't update more than one schema at the same time.
 
 1. Identify schema coordinates (`--schema-type`, `--schema-name`, `--tag`)
 2. Identify artifact source (`--zip-file` or `--zip-url`)
-3. If using a GitHub release tag URL, set `--release-asset` (for example: `project-artifacts.zip`)
+3. If using `--zip-url`, provide a direct downloadable `.zip` artifact URL
 4. If importing a nested directory, set `--source-subdir` (for example: `project/data-dictionary`)
 
 
 ### Step 2: Run import_release
 
-Example using release tag URL + asset name:
+Example: Import data dictionaries (default target-subdir):
 
 ```bash
 python src/import_release.py \
-  --schema-type data_dictionaries \
+  --schema-type common_data_model \
   --schema-name fhir \
   --tag v2.9.4 \
-  --zip-url https://github.com/carrollaboratory/kfi-fhir-input/releases/tag/v2.9.3 \
-  --release-asset project-artifacts.zip \
+  --zip-url https://github.com/carrollaboratory/kfi-fhir-input/releases/download/v2.9.3/project-artifacts.zip \
   --source-subdir project/data-dictionary
+```
+
+Example: Import enumerations to specific subdirectory:
+
+```bash
+python src/import_release.py \
+  --schema-type common_data_model \
+  --schema-name fhir \
+  --tag v2.9.3 \
+  --zip-url https://github.com/carrollaboratory/kfi-fhir-input/releases/download/v2.9.3/project-artifacts.zip \
+  --source-subdir project/enumerations \
+  --target-subdir enumerations \
+  --replace-existing
 ```
 
 Example using direct artifact URL:
 
 ```bash
 python src/import_release.py \
-  --schema-type data_dictionaries \
+  --schema-type common_data_model \
   --schema-name fhir \
   --tag v2.9.4 \
   --zip-url https://github.com/carrollaboratory/kfi-fhir-input/releases/download/v2.9.3/project-artifacts.zip \
@@ -98,8 +104,7 @@ python src/import_release.py \
 
 Notes:
 
-- `import_release.py` updates `manifest.yaml` for the target schema automatically.
-- For `data_dictionaries`, `_<schema-name>_study.yaml` is generated automatically unless `--no-generate-study-yaml` is used.
+- `--target-subdir` defaults to `data_dictionary` for common_data_model imports (override as needed).
 - Use `--replace-existing` when intentionally re-importing the same tag directory.
 
 
@@ -107,9 +112,9 @@ Notes:
 
 Verify:
 
-1. Files were written under `src/ftd_schema/schemas/data_dictionaries/<schema-name>/<tag>/`
-2. `manifest.yaml` has the expected version entry and current pointers
-3. `_<schema-name>_study.yaml` is present and references expected `*-dd.csv` files
+1. Files were written under `src/ftd_schema/schema/common_data_model/<schema-name>/<tag>/<target-subdir>/`
+   (or `src/ftd_schema/schema/common_data_model/<schema-name>/<tag>/` if no subdirectory specified)
+2. Imported files match the expected contents from the source zip
 
 
 ### Step 4: Commit all changes to a branch, when ready ask for a PR review.
@@ -119,9 +124,8 @@ Verify:
 
 - [ ] Schema file(s) edited and tested
 - [ ] Manifest updated with new version, breaking changes, notes
-- [ ] `current_stable_tag` in manifest points to latest tested stable
-- [ ] Beta entries are marked with `status: beta` until promoted
-- [ ] For data_dictionaries, `_<schema-name>_study.yaml` generated and reviewed
+- [ ] Version marked with `status: stable` or `status: beta` as appropriate
+- [ ] Deprecated entries marked with `deprecated: true` if applicable
 - [ ] Tools consuming this schema notified (if applicable)
 
 ---
