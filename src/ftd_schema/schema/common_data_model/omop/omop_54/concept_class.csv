@@ -1,0 +1,4 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+concept_class_id,"Unique key for each class.",varchar(20),,,,,"Primary Key for the CONCEPT_CLASS table.","Yes","Yes","No",,,"not_null"
+concept_class_name,"Descriptive name of the Concept Class (e.g., Clinical Finding, Ingredient).",varchar(255),,,,,"Human-readable name of the Concept Class.","Yes","No","No",,,"not_null"
+concept_class_concept_id,"Concept identifier representing the Concept Class.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"

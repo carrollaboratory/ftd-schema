@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+dose_era_id,"Unique identifier for each Dose Era record.",integer,,,,,"Primary Key for the DOSE_ERA table.","Yes","Yes","No",,,not_null
+person_id,"Identifier of the Person to whom the Dose Era applies.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,not_null
+drug_concept_id,"Concept identifier representing the specific drug ingredient.",integer,,,,Ingredient Concepts,"Foreign Key: CONCEPT.concept_id (Domain: Drug; Concept Class: Ingredient).","Yes","No","Yes","CONCEPT","Drug",not_null
+unit_concept_id,"Concept identifier representing the unit of the drug ingredient dosage.",integer,,,,Accepted Unit Concepts,"Foreign Key: CONCEPT.concept_id (Domain: Unit).","Yes","No","Yes","CONCEPT","Unit",not_null
+dose_value,"Numeric value representing the dosage of the drug ingredient.",float,,,,,"Dosage amount corresponding to unit_concept_id.","Yes","No","No",,,not_null
+dose_era_start_date,"Date the Person started the specific dosage, with at least a 30-day persistence window since prior exposure.",date,,,,,"Start date of continuous dose era.","Yes","No","No",,,not_null
+dose_era_end_date,"Date the Person was no longer exposed to the specific dosage. An era ends if there are 31 days or more between dosage records.",date,,,,,"End date of continuous dose era.","Yes","No","No",,,not_null

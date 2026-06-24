@@ -1,0 +1,16 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+specimen_id,"Unique identifier for each specimen.",integer,,,,,"Primary Key for the SPECIMEN table","Yes","Yes","No",,,not_null
+person_id,"The person from whom the specimen is collected.",integer,,,,,"Foreign Key: PERSON.person_id","Yes","No","Yes","PERSON",,not_null
+specimen_concept_id,"The standard CONCEPT_ID that the SPECIMEN_SOURCE_VALUE maps to in the specimen domain.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.specimen_concept_id","Yes","No","Yes","CONCEPT",,not_null
+specimen_type_concept_id,"Put the source of the specimen record, as in an EHR system.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.specimen_type_concept_id","Yes","No","Yes","CONCEPT","Type Concept",not_null
+specimen_date,"The date the specimen was collected.",date,,,,,"Date the specimen was collected.","Yes","No","No",,,not_null
+specimen_datetime,,datetime,,,,,"Datetime the specimen was collected, if available.","No","No","No",,,
+quantity,"The amount of specimen collected from the person.",float,,,,,"Amount of specimen collected.","No","No","No",,,
+unit_concept_id,"The unit for the quantity of the specimen.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.unit_concept_id","No","No","Yes","CONCEPT",,
+anatomic_site_concept_id,"This is the site on the body where the specimen is from.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.anatomic_site_concept_id","No","No","Yes","CONCEPT",,
+disease_status_concept_id,,integer,,,,,"Foreign Key: CONCEPT.disease_status_concept_id","No","No","Yes","CONCEPT",,
+specimen_source_id,"This is the identifier for the specimen from the source system.",varchar(50),,,,,"Source identifier for the specimen.","No","No","No",,,
+specimen_source_value,,varchar(50),,,,,"Verbatim source value for the specimen.","No","No","No",,,
+unit_source_value,"This unit for the quantity of the specimen, as represented in the source.",varchar(50),,,,,"Source value for the unit of quantity.","No","No","No",,,
+anatomic_site_source_value,"This is the site on the body where the specimen was taken from, as represented in the source.",varchar(50),,,,,"Source value for the anatomic site of the specimen.","No","No","No",,,
+disease_status_source_value,,varchar(50),,,,,"Source value for the disease status.","No","No","No",,,

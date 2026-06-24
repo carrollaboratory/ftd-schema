@@ -1,0 +1,4 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+episode_id,"Link to the EPISODE that subsumes the EPISODE_EVENT record.",integer,,,,,"Foreign Key: EPISODE.episode_id.","Yes","No","Yes","EPISODE",,"not_null"
+event_id,"Primary key of the linked record in the database (e.g., CONDITION_OCCURRENCE_ID).",integer,,,,,"Primary key of the linked record.","Yes","No","No",,,"not_null"
+episode_event_field_concept_id,"Concept ID identifying the table and field the EVENT_ID came from.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Metadata domain).","Yes","No","Yes","CONCEPT","Metadata","not_null"

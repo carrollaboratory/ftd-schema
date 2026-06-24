@@ -1,0 +1,20 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+visit_detail_id,"Unique identifier for interactions between a person and the healthcare system at a detailed level.",integer,,,,,"Primary Key for the VISIT_DETAIL table.","Yes","Yes","No",,,"not_null"
+person_id,"Unique identifier for the person associated with the visit detail.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,"not_null"
+visit_detail_concept_id,"Concept ID representing the kind of visit detail (e.g., inpatient, outpatient, etc.).",integer,,,,38004232;38004307;38004210;8882;38004231;38004354;38004364;33007;38004305;38004353;8850;8668;581478;38004208;38004209,"Foreign Key: CONCEPT.concept_id (Visit domain).","Yes","No","Yes","CONCEPT","Visit","not_null"
+visit_detail_start_date,"Start date of the visit detail (e.g., date of patient-provider interaction).",date,,,,,"Start date of the visit detail.","Yes","No","No",,,"not_null"
+visit_detail_start_datetime,"Start datetime of the visit detail. If no time is given, set to midnight (00:00:0000).",datetime,,,,,"Start datetime of the visit detail.","No","No","No",,,
+visit_detail_end_date,"End date of the visit detail (e.g., date of discharge or end of interaction). Default value for ongoing inpatient visits is the date of data pull.",date,,,,,"End date of the visit detail.","Yes","No","No",,,"not_null"
+visit_detail_end_datetime,"End datetime of the visit detail. If no time is given, set to midnight (00:00:0000).",datetime,,,,,"End datetime of the visit detail.","No","No","No",,,
+visit_detail_type_concept_id,"Concept ID representing the provenance of the visit detail record (e.g., EHR or billing claim).",integer,,,,32809;32810;32811;32812;32813;32814;32815;32816;32817;32818;32819;32820;32821;32822;32823,"Foreign Key: CONCEPT.concept_id (Type Concept).","Yes","No","Yes","CONCEPT","Type Concept","not_null"
+provider_id,"Identifier for the provider associated with the visit detail.",integer,,,,,"Foreign Key: PROVIDER.provider_id.","No","No","Yes","PROVIDER",,
+care_site_id,"Identifier for the Care Site where the visit detail took place.",integer,,,,,"Foreign Key: CARE_SITE.care_site_id.","No","No","Yes","CARE_SITE",,
+visit_detail_source_value,"Verbatim value from source data representing the kind of visit detail (e.g., inpatient, outpatient, emergency).",varchar(50),,,,,"Source-provided visit detail type.","No","No","No",,,
+visit_detail_source_concept_id,"Concept ID representing the coded source value of the visit detail.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+admitted_from_concept_id,"Concept ID representing the location where the patient was admitted from (e.g., home or long-term care facility).",integer,,,,,"Foreign Key: CONCEPT.concept_id (Visit domain).","No","No","Yes","CONCEPT","Visit",
+admitted_from_source_value,"Source-provided value indicating where a person was admitted from.",varchar(50),,,,,"Source-provided admission location.","No","No","No",,,
+discharged_to_concept_id,"Concept ID representing where the patient was discharged to (e.g., home or long-term care facility).",integer,,,,,"Foreign Key: CONCEPT.concept_id (Visit domain).","No","No","Yes","CONCEPT","Visit",
+discharged_to_source_value,"Source-provided value indicating where a person was discharged to.",varchar(50),,,,,"Source-provided discharge location.","No","No","No",,,
+preceding_visit_detail_id,"Identifier for the visit detail immediately preceding the current visit detail record.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id.","No","No","Yes","VISIT_DETAIL",,
+parent_visit_detail_id,"Identifier for the parent visit detail that subsumes the given visit detail record.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id.","No","No","Yes","VISIT_DETAIL",,
+visit_occurrence_id,"Link between the VISIT_DETAIL record and its VISIT_OCCURRENCE.",integer,,,,,"Foreign Key: VISIT_OCCURRENCE.visit_occurrence_id.","Yes","No","Yes","VISIT_OCCURRENCE",,"not_null"

@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+drug_era_id,"Unique identifier for each Drug Era record.",integer,,,,,"Primary Key for the DRUG_ERA table.","Yes","Yes","No",,,not_null
+person_id,"Identifier of the Person to whom the Drug Era applies.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,not_null
+drug_concept_id,"Concept identifier representing the drug ingredient. Must conform to concept class 'Ingredient'.",integer,,,,Ingredient Concepts,"Foreign Key: CONCEPT.concept_id (Domain: Drug; Concept Class: Ingredient).","Yes","No","Yes","CONCEPT","Drug",not_null
+drug_era_start_date,"Start date of the Drug Era. Defined as the start date of the first Drug Exposure for a given ingredient, allowing a maximum 30-day persistence window between exposures.",date,,,,,"Start date of continuous drug exposure era.","Yes","No","No",,,not_null
+drug_era_end_date,"End date of the Drug Era. Defined as the end date of the last Drug Exposure, inferred using days_supply or administration rules. A standard 30-day persistence window is applied between exposures.",date,,,,,"End date of continuous drug exposure era.","Yes","No","No",,,not_null
+drug_exposure_count,"Number of DRUG_EXPOSURE records grouped into this Drug Era.",integer,,,,,"Count of contributing exposure records.","No","No","No",,,
+gap_days,"Total number of drug-free days between Drug Exposure events contributing to the Drug Era, assuming no stockpiling.",integer,,,,,"Sum of actual gap days within the era.","No","No","No",,,

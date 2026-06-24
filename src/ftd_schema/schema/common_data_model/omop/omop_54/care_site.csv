@@ -1,0 +1,7 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+care_site_id,"Assign an id to each unique combination of location_id and place_of_service_source_value.",integer,,,,,"Primary Key for the CARE_SITE table","Yes","Yes","No",,,not_null
+care_site_name,"The name of the care_site as it appears in the source data.",varchar(255),,,,,"Name of the care site from the source data.","No","No","No",,,
+place_of_service_concept_id,"This is a high-level way of characterizing a Care Site. Typically, however, Care Sites can provide care in multiple settings (inpatient, outpatient, etc.) and this granularity should be reflected in the visit.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.place_of_service_concept_id","No","No","Yes","CONCEPT",,
+location_id,"The location_id from the LOCATION table representing the physical location of the care_site.",integer,,,,,"Foreign Key: LOCATION.location_id","No","No","Yes","LOCATION",,
+care_site_source_value,"The identifier of the care_site as it appears in the source data. This could be an identifier separate from the name of the care_site.",varchar(50),,,,,"Source identifier for the care site.","No","No","No",,,
+place_of_service_source_value,"Put the place of service of the care_site as it appears in the source data.",varchar(50),,,,,"Source value for the place of service.","No","No","No",,,

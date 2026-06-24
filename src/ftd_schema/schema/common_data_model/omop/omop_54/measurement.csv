@@ -1,0 +1,24 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+measurement_id,"Unique identifier for a measurement record for a person.",integer,,,,,"Primary Key for the MEASUREMENT table.","Yes","Yes","No",,,"not_null"
+person_id,"Unique identifier for the person associated with the measurement.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,"not_null"
+measurement_concept_id,"Standard concept mapped from the source value representing a measurement.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Measurement domain).","Yes","No","Yes","CONCEPT","Measurement","not_null"
+measurement_date,"Date of the measurement (e.g., closest to sample draw date).",date,,,,,"Date of the measurement.","Yes","No","No",,,"not_null"
+measurement_datetime,"Datetime of the measurement. Convention is to set time to midnight if unavailable.",datetime,,,,,"Datetime of the measurement.","No","No","No",,,
+measurement_time,"Time of the measurement (backwards compatibility, deprecated in future versions).",varchar(10),,,,,"Deprecated field for measurement time.","No","No","No",,,
+measurement_type_concept_id,"Concept ID representing the provenance of the measurement record (e.g., EHR, claims).",integer,,,,32809;32810;32811;32812;32813;32814;32815;32816;32817;32818;32819;32820;32821;32822;32823,"Foreign Key: CONCEPT.concept_id (Type Concept).","Yes","No","Yes","CONCEPT","Type Concept","not_null"
+operator_concept_id,"Concept ID representing the operator (e.g., =, >, <) for the measurement value.",integer,,,,4171756;4171754;4172703;4172704;4171755;4329646;4172702,"Foreign Key: CONCEPT.concept_id (Meas Value Operator domain).","No","No","Yes","CONCEPT",,
+value_as_number,"Numerical value of the measurement result.",float,,,,,"Numerical result of the measurement.","No","No","No",,,
+value_as_concept_id,"Concept ID representing the categorical result of the measurement.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Meas Value domain).","No","No","Yes","CONCEPT",,
+unit_concept_id,"Concept ID representing the unit of the measurement.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Unit domain).","No","No","Yes","CONCEPT","Unit",
+range_low,"Low reference range for the measurement.",float,,,,,"Lower limit of normal range for the measurement.","No","No","No",,,
+range_high,"High reference range for the measurement.",float,,,,,"Upper limit of normal range for the measurement.","No","No","No",,,
+provider_id,"Provider associated with the measurement record.",integer,,,,,"Foreign Key: PROVIDER.provider_id.","No","No","Yes","PROVIDER",,
+visit_occurrence_id,"Visit during which the measurement occurred.",integer,,,,,"Foreign Key: VISIT_OCCURRENCE.visit_occurrence_id.","No","No","Yes","VISIT_OCCURRENCE",,
+visit_detail_id,"Visit Detail during which the measurement occurred.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id.","No","No","Yes","VISIT_DETAIL",,
+measurement_source_value,"Verbatim value from the source data representing the measurement.",varchar(50),,,,,"Source-provided measurement value.","No","No","No",,,
+measurement_source_concept_id,"Concept ID representing the measurement source value, not necessarily standard.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+unit_source_value,"Verbatim value from the source data representing the unit of measurement.",varchar(50),,,,,"Source-provided unit value for the measurement.","No","No","No",,,
+unit_source_concept_id,"Concept ID representing the unit source value, not necessarily standard.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+value_source_value,"Verbatim result value of the measurement from the source data.",varchar(50),,,,,"Source-provided result value for the measurement.","No","No","No",,,
+measurement_event_id,"Primary key of the linked record related to the measurement, if applicable.",integer,,,,,"Linked record identifier.","No","No","No",,,
+meas_event_field_concept_id,"Concept ID identifying the table and field the linked record belongs to.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,

@@ -1,0 +1,13 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+location_id,"Unique identifier for a location.",integer,,,,,"Primary Key for the LOCATION table.","Yes","Yes","No",,,"not_null"
+address_1,"First line of the address.",varchar(50),,,,,"First line of the address.","No","No","No",,,
+address_2,"Second line of the address.",varchar(50),,,,,"Second line of the address.","No","No","No",,,
+city,"City of the location.",varchar(50),,,,,"City name.","No","No","No",,,
+state,"State of the location.",varchar(2),,,,,"State abbreviation.","No","No","No",,,
+zip,"Zip code of the location. For US addresses, supports 3-digit, 5-digit, or 9-digit (ZIP + 4).",varchar(9),,,,,"Zip code handling as a string.","No","No","No",,,
+county,"County of the location.",varchar(20),,,,,"County name.","No","No","No",,,
+location_source_value,"Verbatim value for the location as it appears in the source.",varchar(50),,,,,"Source-provided location value.","No","No","No",,,
+country_concept_id,"Concept ID representing the country, conforming to the Geography domain.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Geography domain).","No","No","Yes","CONCEPT",,
+country_source_value,"Name of the country.",varchar(80),,,,,"Country name from the source data.","No","No","No",,,
+latitude,"Latitude of the location. Must be between -90 and 90.",float,-90,90,,,"Geographical latitude.","No","No","No",,,
+longitude,"Longitude of the location. Must be between -180 and 180.",float,-180,180,,,"Geographical longitude.","No","No","No",,,

@@ -1,0 +1,82 @@
+model_name: omop_54
+model_prefix: omop_54
+format: pipeline_format
+data_dictionary:
+  person:
+    identifier: person.csv
+  observation_period:
+    identifier: observation_period.csv
+  visit_occurrence:
+    identifier: visit_occurrence.csv
+  visit_detail:
+    identifier: visit_detail.csv
+  condition_occurrence:
+    identifier: condition_occurrence.csv
+  drug_exposure:
+    identifier: drug_exposure.csv
+  procedure_occurrence:
+    identifier: procedure_occurrence.csv
+  device_exposure:
+    identifier: device_exposure.csv
+  measurement:
+    identifier: measurement.csv
+  observation:
+    identifier: observation.csv
+  death:
+    identifier: death.csv
+  note:
+    identifier: note.csv
+  note_nlp:
+    identifier: note_nlp.csv
+  specimen:
+    identifier: specimen.csv
+  fact_relationship:
+    identifier: fact_relationship.csv
+  location:
+    identifier: location.csv
+  care_site:
+    identifier: care_site.csv
+  provider:
+    identifier: provider.csv
+  payer_plan_period:
+    identifier: payer_plan_period.csv
+  cost:
+    identifier: cost.csv
+  drug_era:
+    identifier: drug_era.csv
+  dose_era:
+    identifier: dose_era.csv
+  condition_era:
+    identifier: condition_era.csv
+  episode:
+    identifier: episode.csv
+  episode_event:
+    identifier: episode_event.csv
+  metadata:
+    identifier: metadata.csv
+  cdm_source:
+    identifier: cdm_source.csv
+  concept:
+    identifier: concept.csv
+  vocabulary:
+    identifier: vocabulary.csv
+  domain:
+    identifier: domain.csv
+  concept_class:
+    identifier: concept_class.csv
+  concept_relationship:
+    identifier: concept_relationship.csv
+  relationship:
+    identifier: relationship.csv
+  concept_synonym:
+    identifier: concept_synonym.csv
+  concept_ancestor:
+    identifier: concept_ancestor.csv
+  source_to_concept_map:
+    identifier: source_to_concept_map.csv
+  drug_strength:
+    identifier: drug_strength.csv
+  cohort:
+    identifier: cohort.csv
+  cohort_definition:
+    identifier: cohort_definition.csv

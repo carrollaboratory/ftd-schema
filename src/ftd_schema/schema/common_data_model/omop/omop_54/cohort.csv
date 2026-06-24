@@ -1,0 +1,5 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+cohort_definition_id,"Identifier for the cohort definition.",integer,,,,,"Link to the cohort definition (not a primary key).","Yes","No","No",,,"not_null"
+subject_id,"Identifier for the subject (e.g., PERSON_ID) included in the cohort.",integer,,,,,"Subject identifier in the cohort.","Yes","No","No",,,"not_null"
+cohort_start_date,"Start date of the cohort for the subject.",date,,,,,"Start date of cohort membership.","Yes","No","No",,,"not_null"
+cohort_end_date,"End date of the cohort for the subject.",date,,,,,"End date of cohort membership.","Yes","No","No",,,"not_null"

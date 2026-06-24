@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+cohort_definition_id,"Identifier given to the cohort, usually by the ATLAS application.",integer,,,,,"Unique identifier for the cohort.","Yes","No","No",,,"not_null"
+cohort_definition_name,"A short description of the cohort.",varchar(255),,,,,"Human-readable name for the cohort.","Yes","No","No",,,"not_null"
+cohort_definition_description,"A complete description of the cohort.",varchar(MAX),,,,,"Detailed description of the cohort.","No","No","No",,,
+definition_type_concept_id,"Type defining what kind of Cohort Definition the record represents and how the syntax may be executed.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+cohort_definition_syntax,"Syntax or code to operationalize the Cohort Definition.",varchar(MAX),,,,,"Operational syntax for cohort definition.","No","No","No",,,
+subject_concept_id,"Concept representing the domain of the subjects that are members of the cohort (e.g., Person, Provider, Visit).",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+cohort_initiation_date,"A date to indicate when the Cohort was initiated in the COHORT table.",date,,,,,"Date of cohort initiation.","No","No","No",,,

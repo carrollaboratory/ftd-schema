@@ -1,0 +1,5 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+ancestor_concept_id,"The Concept ID for the higher-level concept that forms the ancestor in the relationship.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+descendant_concept_id,"The Concept ID for the lower-level concept that forms the descendant in the relationship.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+min_levels_of_separation,"The minimum number of hierarchical levels separating ancestor and descendant concepts. Used to simplify hierarchical analysis.",integer,,,,,"Minimum separation between ancestor and descendant concepts.","Yes","No","No",,,"not_null"
+max_levels_of_separation,"The maximum number of hierarchical levels separating ancestor and descendant concepts. Used to simplify hierarchical analysis.",integer,,,,,"Maximum separation between ancestor and descendant concepts.","Yes","No","No",,,"not_null"
