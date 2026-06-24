@@ -1,0 +1,10 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+source_code,"The source code being translated into a Standard Concept.",varchar(50),,,,,"Original source code to be mapped.","Yes","No","No",,,"not_null"
+source_concept_id,"A foreign key to the Source Concept being translated into a Standard Concept. This is either 0 or a number above 2 billion, reserved for site-specific codes and mappings.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+source_vocabulary_id,"A foreign key to the VOCABULARY table defining the vocabulary of the source code being translated to a Standard Concept.",varchar(20),,,,,"Vocabulary identifier for the source code.","Yes","No","No",,,"not_null"
+source_code_description,"An optional description of the source code to compare with the name of the Standard Concept.",varchar(255),,,,,"Optional description for the source code.","No","No","No",,,
+target_concept_id,"The target Concept to which the source code is being mapped.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+target_vocabulary_id,"The Vocabulary of the target Concept.",varchar(20),,,,,"Foreign Key: VOCABULARY.vocabulary_id.","Yes","No","Yes","VOCABULARY",,"not_null"
+valid_start_date,"The date when the mapping instance was first recorded.",date,,,,,"Start date for mapping validity.","Yes","No","No",,,"not_null"
+valid_end_date,"The date when the mapping instance became invalid because it was deleted or superseded by a new relationship. Default value is 31-Dec-2099.",date,,,,,"End date for mapping validity.","Yes","No","No",,,"not_null"
+invalid_reason,"Reason the mapping instance was invalidated. Possible values are D (deleted), U (replaced with an update), or NULL when valid_end_date has the default value.",varchar(1),,,,D;U,"Invalidation reason for the mapping instance.","No","No","No",,,

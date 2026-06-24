@@ -1,0 +1,6 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+observation_period_id,"A Person can have multiple discrete Observation Periods which are identified by the Observation_Period_Id.",integer,,,,,"Yes","Yes","No",,,,not_null
+person_id,"The Person ID of the PERSON record for which the Observation Period is recorded.",integer,,,,,"Foreign Key: Demographics.subject_id","Yes","No","Yes","PERSON",,not_null
+observation_period_start_date,"Use this date to determine the start date of the Observation Period.",date,,,,,,"Yes","No","No",,,not_null
+observation_period_end_date,"Use this date to determine the end date of the period for which we can assume that all events for a Person are recorded.",date,,,,,,"Yes","No","No",,,not_null
+period_type_concept_id,"This field can be used to determine the provenance of the Observation Period as in whether the period was determined from an insurance enrollment file, EHR healthcare encounters, or other sources.",integer,,,,32809;32810;32811;32812;32813;32814;32815;32816;32817;32818;32819;32820;32821;32822;32823,"Foreign Key: Demographics.subject_id","Yes","No","Yes","CONCEPT","Type Concept",not_null

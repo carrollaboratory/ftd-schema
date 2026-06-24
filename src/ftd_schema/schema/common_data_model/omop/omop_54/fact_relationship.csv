@@ -1,0 +1,6 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+domain_concept_id_1,,integer,,,,,"Foreign Key: CONCEPT.domain_concept_id_1","Yes","No","Yes","CONCEPT",,not_null
+fact_id_1,,integer,,,,,"Identifier for the first fact.","Yes","No","No",,,not_null
+domain_concept_id_2,,integer,,,,,"Foreign Key: CONCEPT.domain_concept_id_2","Yes","No","Yes","CONCEPT",,not_null
+fact_id_2,,integer,,,,,"Identifier for the second fact.","Yes","No","No",,,not_null
+relationship_concept_id,,integer,,,,,"Foreign Key: CONCEPT.relationship_concept_id","Yes","No","Yes","CONCEPT",,not_null

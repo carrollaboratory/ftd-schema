@@ -1,0 +1,17 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+note_id,"Unique identifier for each note.",integer,,,,,"Primary Key for the NOTE table.","Yes","Yes","No",,,"not_null"
+person_id,"Unique identifier for the person associated with the note.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,"not_null"
+note_date,"Date the note was recorded.",date,,,,,"Date of the note.","Yes","No","No",,,"not_null"
+note_datetime,"Datetime the note was recorded. If time is not given, set to midnight.",datetime,,,,,"Datetime of the note.","No","No","No",,,
+note_type_concept_id,"Concept ID representing the provenance of the note (e.g., EHR record).",integer,,,,,"Foreign Key: CONCEPT.concept_id (Type Concept).","Yes","No","Yes","CONCEPT","Type Concept","not_null"
+note_class_concept_id,"Standard Concept ID representing the HL7 LOINC Document Type Vocabulary classification of the note.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+note_title,"Title of the note.",varchar(250),,,,,"Title of the note.","No","No","No",,,
+note_text,"Content of the note.",varchar(MAX),,,,,"Full text content of the note.","Yes","No","No",,,"not_null"
+encoding_concept_id,"Concept representing the character encoding type (e.g., UTF-8).",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+language_concept_id,"Concept representing the language of the note.",integer,,,,,"Foreign Key: CONCEPT.concept_id (World Languages).","Yes","No","Yes","CONCEPT",,"not_null"
+provider_id,"Provider who wrote the note.",integer,,,,,"Foreign Key: PROVIDER.provider_id.","No","No","Yes","PROVIDER",,
+visit_occurrence_id,"Visit during which the note was written.",integer,,,,,"Foreign Key: VISIT_OCCURRENCE.visit_occurrence_id.","No","No","Yes","VISIT_OCCURRENCE",,
+visit_detail_id,"Visit Detail during which the note was written.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id.","No","No","Yes","VISIT_DETAIL",,
+note_source_value,"Source value mapped to the NOTE_CLASS_CONCEPT_ID.",varchar(50),,,,,"Source-provided note classification value.","No","No","No",,,
+note_event_id,"Primary key of the linked record related to the note, if applicable.",integer,,,,,"Linked record identifier.","No","No","No",,,
+note_event_field_concept_id,"Concept ID identifying the table and field the linked record belongs to.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,

@@ -1,0 +1,17 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+procedure_occurrence_id,"Unique identifier for a procedure record for a person.",integer,,,,,"Primary Key for the PROCEDURE_OCCURRENCE table.","Yes","Yes","No",,,"not_null"
+person_id,"Unique identifier for the person associated with the procedure.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,"not_null"
+procedure_concept_id,"Standard concept mapped from the source value representing a procedure.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Procedure domain).","Yes","No","Yes","CONCEPT","Procedure","not_null"
+procedure_date,"Start date of the procedure.",date,,,,,"Start date of the procedure.","Yes","No","No",,,"not_null"
+procedure_datetime,"Start datetime of the procedure. If the procedure has a time, use this field.",datetime,,,,,"Start datetime of the procedure.","No","No","No",,,
+procedure_end_date,"End date of the procedure. Defaults to the same date as procedure_date if not provided.",date,,,,,"End date of the procedure.","No","No","No",,,
+procedure_end_datetime,"End datetime of the procedure. Used to determine procedure duration.",datetime,,,,,"End datetime of the procedure.","No","No","No",,,
+procedure_type_concept_id,"Concept ID representing the provenance of the procedure record (e.g., EHR, claims).",integer,,,,,"Foreign Key: CONCEPT.concept_id (Type Concept).","Yes","No","Yes","CONCEPT","Type Concept","not_null"
+modifier_concept_id,"Concept ID representing modifiers providing additional information about the procedure.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+quantity,"Quantity of procedures performed. Defaults to 1 if omitted in the source data.",integer,,,,,"Quantity of procedures performed.","No","No","No",,,
+provider_id,"Identifier for the provider associated with the procedure.",integer,,,,,"Foreign Key: PROVIDER.provider_id.","No","No","Yes","PROVIDER",,
+visit_occurrence_id,"The visit during which the procedure occurred.",integer,,,,,"Foreign Key: VISIT_OCCURRENCE.visit_occurrence_id.","No","No","Yes","VISIT_OCCURRENCE",,
+visit_detail_id,"The VISIT_DETAIL record during which the procedure occurred.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id.","No","No","Yes","VISIT_DETAIL",,
+procedure_source_value,"Verbatim value from the source data representing the procedure.",varchar(50),,,,,"Source-provided procedure value.","No","No","No",,,
+procedure_source_concept_id,"Concept ID representing the procedure source value, not necessarily standard.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+modifier_source_value,"Verbatim value from the source data representing the modifier code for the procedure.",varchar(50),,,,,"Source-provided modifier value.","No","No","No",,,

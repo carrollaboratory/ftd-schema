@@ -1,0 +1,7 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+concept_id_1,"First concept identifier in the relationship.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+concept_id_2,"Second concept identifier in the relationship.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+relationship_id,"The relationship between CONCEPT_ID_1 and CONCEPT_ID_2. Please see the Vocabulary Conventions for more information.",varchar(20),,,,,"Foreign Key: RELATIONSHIP.relationship_id.","Yes","No","Yes","RELATIONSHIP",,"not_null"
+valid_start_date,"The date when the relationship is first recorded.",date,,,,,"Start date for the relationship validity.","Yes","No","No",,,"not_null"
+valid_end_date,"The date when the relationship is invalidated.",date,,,,,"End date for the relationship validity.","Yes","No","No",,,"not_null"
+invalid_reason,"Reason the relationship was invalidated. Possible values are ‘D’ (deleted), ‘U’ (updated), or NULL.",varchar(1),,,,,"Invalidation reason for the relationship.","No","No","No",,,

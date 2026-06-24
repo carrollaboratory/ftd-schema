@@ -1,0 +1,11 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+cdm_source_name,"Name of the CDM instance.",varchar(255),,,,,"Human-readable name of the OMOP CDM database instance.","Yes","No","No",,,not_null
+cdm_source_abbreviation,"Abbreviation of the CDM instance.",varchar(25),,,,,"Short name or acronym for the CDM instance.","No","No","No",,,
+cdm_holder,"Organization or entity that holds the CDM instance.",varchar(255),,,,,"Institution responsible for maintaining the CDM.","No","No","No",,,
+source_description,"Description of the CDM instance.",varchar(MAX),,,,,"Narrative description of the data source and transformation context.","No","No","No",,,
+source_documentation_reference,"Reference to documentation describing the source data or ETL process.",varchar(255),,,,,"URL or citation for source documentation.","No","No","No",,,
+cdm_etl_reference,"Version or reference to the ETL script used (e.g., Git release link).",varchar(255),,,,,"Identifier or link to ETL implementation used to generate this CDM instance.","No","No","No",,,
+source_release_date,"Date the data was extracted from the source system.",date,,,,,"Typically reflects the latest event date available in the source.","No","No","No",,,
+cdm_release_date,"Date the ETL process was completed.",date,,,,,"Usually occurs after the source_release_date.","No","No","No",,,
+cdm_version,"Version of the OMOP CDM used (e.g., v5.4).",varchar(10),,,,,"OMOP Common Data Model version implemented.","No","No","No",,,
+vocabulary_version,"Version of the OMOP Standardized Vocabularies used.",varchar(20),,,,,"Vocabulary release version applied during ETL.","No","No","No",,,

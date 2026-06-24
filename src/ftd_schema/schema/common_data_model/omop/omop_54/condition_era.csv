@@ -1,0 +1,7 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+condition_era_id,"Unique identifier for each Condition Era record.",integer,,,,,"Primary Key for the CONDITION_ERA table.","Yes","Yes","No",,,not_null
+person_id,"Identifier of the Person to whom the Condition Era applies.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,not_null
+condition_concept_id,"Concept identifier representing the condition.",integer,,,,Accepted Condition Concepts,"Foreign Key: CONCEPT.concept_id (Domain: Condition).","Yes","No","Yes","CONCEPT","Condition",not_null
+condition_era_start_date,"Start date of the Condition Era. Defined as the earliest chronologically recorded condition occurrence with at least a 30-day persistence window since any prior occurrence of the same condition.",date,,,,,"Start date of continuous condition era.","Yes","No","No",,,not_null
+condition_era_end_date,"End date of the Condition Era. Defined as the end date of the final continuously recorded condition occurrence.",date,,,,,"End date of continuous condition era.","Yes","No","No",,,not_null
+condition_occurrence_count,"Number of CONDITION_OCCURRENCE records grouped into this Condition Era.",integer,,,,,"Count of contributing condition occurrence records.","No","No","No",,,

@@ -1,0 +1,24 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+drug_exposure_id,"The unique key given to records of drug dispensings or administrations for a person. Refer to the ETL for how duplicate drugs during the same visit were handled.",integer,,,,,"Primary Key for the DRUG_EXPOSURE table","Yes","Yes","No",,,not_null
+person_id,"The PERSON_ID of the PERSON for whom the drug dispensing or administration is recorded. This may be a system generated code.",integer,,,,,"Foreign Key: PERSON.person_id","Yes","No","Yes","PERSON",,not_null
+drug_concept_id,"The DRUG_CONCEPT_ID field is recommended for primary use in analyses, and must be used for network studies. This is the standard concept mapped from the source concept id which represents a drug product or molecule otherwise introduced to the body.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.drug_concept_id","Yes","No","Yes","CONCEPT","Drug",not_null
+drug_exposure_start_date,"Use this date to determine the start date of the drug record.",date,,,,,"Valid entries include a prescription start date, fill date, or administration date.","Yes","No","No",,,not_null
+drug_exposure_start_datetime,,datetime,,,,,"Set the time to midnight (00:00:0000) if no time is specified.","No","No","No",,,
+drug_exposure_end_date,"The DRUG_EXPOSURE_END_DATE denotes the day the drug exposure ended for the patient.",date,,,,,"Infer end date from start date and duration if not explicitly available.","Yes","No","No",,,not_null
+drug_exposure_end_datetime,,datetime,,,,,"Set the time to midnight (00:00:0000) if no time is specified.","No","No","No",,,
+verbatim_end_date,"This is the end date of the drug exposure as it appears in the source data, if it is given.",date,,,,,"Put the end date or discontinuation date as it appears from the source data, or leave blank if unavailable.","No","No","No",,,
+drug_type_concept_id,"You can use the TYPE_CONCEPT_ID to delineate between prescriptions written vs. prescriptions dispensed vs. medication history vs. patient-reported exposure, etc.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.drug_type_concept_id","Yes","No","Yes","CONCEPT","Type Concept",not_null
+stop_reason,"The reason a person stopped a medication as it is represented in the source. Reasons include regimen completed, changed, removed, etc.",varchar(20),,,,,"Valid ETL choice to leave blank if information is unavailable.","No","No","No",,,
+refills,"This is only filled in when the record is coming from a prescription written. This field is meant to represent intended refills at the time of the prescription.",integer,,,,,"Refills intended at time of prescription.","No","No","No",,,
+quantity,,float,,,,,"Quantity of drug dispensed or administered, converted to correct units if necessary.","No","No","No",,,
+days_supply,"The number of days of supply of the medication as recorded in the original prescription or dispensing record.",integer,,,,,"Leave empty if not available in source data. Negative values are not allowed.","No","No","No",,,
+sig,"This is the verbatim instruction for the drug as written by the provider.",varchar(MAX),,,,,"Written out instructions verbatim from the source.","No","No","No",,,
+route_concept_id,,integer,,,,,"Foreign Key: CONCEPT.route_concept_id","No","No","Yes","CONCEPT","Route",
+lot_number,,varchar(50),,,,,"Lot number of drug exposure, if available.","No","No","No",,,
+provider_id,"The Provider associated with drug record, e.g. the provider who wrote the prescription or the provider who administered the drug.",integer,,,,,"Foreign Key: PROVIDER.provider_id","No","No","Yes","PROVIDER",,
+visit_occurrence_id,"The Visit during which the drug was prescribed, administered or dispensed.",integer,,,,,"Foreign Key: VISIT_OCCURRENCE.visit_occurrence_id","No","No","Yes","VISIT_OCCURRENCE",,
+visit_detail_id,"The VISIT_DETAIL record during which the drug exposure occurred.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id","No","No","Yes","VISIT_DETAIL",,
+drug_source_value,"This field houses the verbatim value from the source data representing the drug exposure that occurred. For example, this could be an NDC or Gemscript code.",varchar(50),,,,,"Verbatim value from source data.","No","No","No",,,
+drug_source_concept_id,"This is the concept representing the drug source value and may not necessarily be standard.",integer,,,,,"Foreign Key: CONCEPT.drug_source_concept_id","No","No","Yes","CONCEPT",,
+route_source_value,"This field houses the verbatim value from the source data representing the drug route.",varchar(50),,,,,"Verbatim value indicating the drug route from source data.","No","No","No",,,
+dose_unit_source_value,"This field houses the verbatim value from the source data representing the dose unit of the drug given.",varchar(50),,,,,"Verbatim value of dose unit from source data.","No","No","No",,,

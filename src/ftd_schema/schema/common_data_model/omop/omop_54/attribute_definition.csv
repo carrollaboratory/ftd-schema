@@ -1,0 +1,6 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+attribute_definition_id,"Unique identifier for the attribute definition.",integer,,,,,"Primary key for the ATTRIBUTE_DEFINITION table.","Yes","No","No",,,"not_null"
+attribute_name,"Name of the attribute.",varchar(255),,,,,"Human-readable name for the attribute.","Yes","No","No",,,"not_null"
+attribute_description,"Description of the attribute.",varchar(MAX),,,,,"Detailed description of the attribute.","No","No","No",,,
+attribute_type_concept_id,"The Concept representing the type of attribute.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+attribute_syntax,"The syntax or code defining the attribute.",varchar(MAX),,,,,"Operational syntax for the attribute.","No","No","No",,,

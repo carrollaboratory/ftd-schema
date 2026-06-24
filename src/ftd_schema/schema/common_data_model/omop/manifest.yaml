@@ -1,0 +1,21 @@
+---
+schema_type: data_dictionaries
+schema_name: omop_54
+description: OMOP version 5.4 CDM data dictionary bundle
+repository: ftd-schema
+owner: OHDSI
+
+versions:
+  - tag: "v5.4"
+    directory: "v5.4"
+    released: ""
+    status: stable
+    breaking_changes: []
+    notes: |
+      - The data dictionaries were created and placed manually.
+    deprecated: false
+
+compatibility:
+  tools:
+    - include-dbt-sandbox
+

@@ -1,0 +1,14 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+episode_id,"Unique identifier for each episode.",integer,,,,,"Primary Key for the EPISODE table.","Yes","Yes","No",,,"not_null"
+person_id,"Unique identifier for the person associated with the episode.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,"not_null"
+episode_concept_id,"Concept representing the kind of abstraction related to the disease phase, outcome, or treatment.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Episode domain).","Yes","No","Yes","CONCEPT","Episode","not_null"
+episode_start_date,"Start date of the episode.",date,,,,,"Date when the episode begins.","Yes","No","No",,,"not_null"
+episode_start_datetime,"Start datetime of the episode.",datetime,,,,,"Datetime when the episode begins.","No","No","No",,,
+episode_end_date,"End date of the episode.",date,,,,,"Date when the episode ends.","No","No","No",,,
+episode_end_datetime,"End datetime of the episode.",datetime,,,,,"Datetime when the episode ends.","No","No","No",,,
+episode_parent_id,"Identifier for the parent episode that subsumes the given episode (nested episodes).",integer,,,,,"Parent episode relationship.","No","No","No",,,
+episode_number,"Sequence number indicating the order of episodes, e.g., lines of treatment.",integer,,,,,"Order of episodes in a sequence.","No","No","No",,,
+episode_object_concept_id,"Standard Concept representing the disease phase, outcome, or abstraction of the episode.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Procedure, Regimen domains).","Yes","No","Yes","CONCEPT","Procedure, Regimen","not_null"
+episode_type_concept_id,"Concept ID representing the provenance of the episode record (e.g., EHR, claims).",integer,,,,,"Foreign Key: CONCEPT.concept_id (Type Concept).","Yes","No","Yes","CONCEPT","Type Concept","not_null"
+episode_source_value,"Source code for the episode as it appears in the source data.",varchar(50),,,,,"Source-provided episode value.","No","No","No",,,
+episode_source_concept_id,"Concept representing the code used in the source for the episode.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,

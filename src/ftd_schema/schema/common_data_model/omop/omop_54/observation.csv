@@ -1,0 +1,22 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+observation_id,"Unique identifier for an observation record for a person.",integer,,,,,"Primary Key for the OBSERVATION table.","Yes","Yes","No",,,"not_null"
+person_id,"Unique identifier for the person associated with the observation.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,"not_null"
+observation_concept_id,"Standard concept mapped from the source value representing an observation.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+observation_date,"Date of the observation (e.g., date of lab test, survey, or family history recording).",date,,,,,"Date of the observation.","Yes","No","No",,,"not_null"
+observation_datetime,"Datetime of the observation. Convention is to set time to midnight if unavailable.",datetime,,,,,"Datetime of the observation.","No","No","No",,,
+observation_type_concept_id,"Concept ID representing the provenance of the observation record (e.g., EHR, claims).",integer,,,,32809;32810;32811;32812;32813;32814;32815;32816;32817;32818;32819;32820;32821;32822;32823,"Foreign Key: CONCEPT.concept_id (Type Concept).","Yes","No","Yes","CONCEPT","Type Concept","not_null"
+value_as_number,"Numerical value of the observation result, if applicable.",float,,,,,"Numeric result of the observation.","No","No","No",,,
+value_as_string,"Categorical value of the observation result, if applicable.",varchar(60),,,,,"Categorical result of the observation.","No","No","No",,,
+value_as_concept_id,"Concept ID representing a categorical result of the observation.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+qualifier_concept_id,"Concept ID representing additional attributes specifying the observation (e.g., degrees, severities).",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+unit_concept_id,"Concept ID representing the unit of the observation, if applicable.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Unit domain).","No","No","Yes","CONCEPT","Unit",
+provider_id,"Provider associated with the observation record (e.g., ordering or recording provider).",integer,,,,,"Foreign Key: PROVIDER.provider_id.","No","No","Yes","PROVIDER",,
+visit_occurrence_id,"Visit during which the observation occurred.",integer,,,,,"Foreign Key: VISIT_OCCURRENCE.visit_occurrence_id.","No","No","Yes","VISIT_OCCURRENCE",,
+visit_detail_id,"Visit Detail during which the observation occurred.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id.","No","No","Yes","VISIT_DETAIL",,
+observation_source_value,"Verbatim value from the source data representing the observation.",varchar(50),,,,,"Source-provided observation value.","No","No","No",,,
+observation_source_concept_id,"Concept ID representing the observation source value, not necessarily standard.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+unit_source_value,"Verbatim value from the source data representing the unit of the observation.",varchar(50),,,,,"Source-provided unit value for the observation.","No","No","No",,,
+qualifier_source_value,"Verbatim value from the source data representing the qualifier of the observation.",varchar(50),,,,,"Source-provided qualifier value for the observation.","No","No","No",,,
+value_source_value,"Verbatim result value of the observation from the source data.",varchar(50),,,,,"Source-provided result value for the observation.","No","No","No",,,
+observation_event_id,"Primary key of the linked record related to the observation, if applicable.",integer,,,,,"Linked record identifier.","No","No","No",,,
+obs_event_field_concept_id,"Concept ID identifying the table and field the linked record belongs to.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,

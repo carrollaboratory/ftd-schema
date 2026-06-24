@@ -1,0 +1,18 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+payer_plan_period_id,"A unique identifier for each unique combination of a Person, Payer, Plan, and Period of time.",integer,,,,,"Primary Key for the PAYER_PLAN_PERIOD table.","Yes","Yes","No",,,not_null
+person_id,"The Person covered by the Plan.",integer,,,,,"Foreign Key: PERSON.person_id. A Person may have multiple overlapping payer plan periods.","Yes","No","Yes","PERSON",,not_null
+payer_plan_period_start_date,"Start date of Plan coverage.",date,,,,,"Coverage start date.","Yes","No","No",,,not_null
+payer_plan_period_end_date,"End date of Plan coverage.",date,,,,,"Coverage end date.","Yes","No","No",,,not_null
+payer_concept_id,"Represents the organization who reimburses the provider administering care to the Person.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.payer_concept_id (Domain: Payer).","No","No","Yes","CONCEPT",,
+payer_source_value,"The Payer as it appears in the source data.",varchar(50),,,,,"Source value for payer.","No","No","No",,,
+payer_source_concept_id,"Stores the OMOP concept_id if the source Payer is coded in a supported vocabulary.",integer,,,,,"Foreign Key: CONCEPT.payer_source_concept_id.","No","No","Yes","CONCEPT",,
+plan_concept_id,"Represents the specific health benefit Plan the Person is enrolled in.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.plan_concept_id (Domain: Plan).","No","No","Yes","CONCEPT",,
+plan_source_value,"The health benefit Plan as it appears in the source data.",varchar(50),,,,,"Source value for plan.","No","No","No",,,
+plan_source_concept_id,"Stores the OMOP concept_id if the source Plan is coded in a supported vocabulary.",integer,,,,,"Foreign Key: CONCEPT.plan_source_concept_id.","No","No","Yes","CONCEPT",,
+sponsor_concept_id,"Represents the sponsor who finances the Plan (e.g., self-insured, small or large group health plan).",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.sponsor_concept_id (Domain: Sponsor).","No","No","Yes","CONCEPT",,
+sponsor_source_value,"The Plan sponsor as it appears in the source data.",varchar(50),,,,,"Source value for sponsor.","No","No","No",,,
+sponsor_source_concept_id,"Stores the OMOP concept_id if the source Sponsor is coded in a supported vocabulary.",integer,,,,,"Foreign Key: CONCEPT.sponsor_source_concept_id.","No","No","Yes","CONCEPT",,
+family_source_value,"Common identifier for all people covered by the same policy (often a family).",varchar(50),,,,,"Typically shared enrollment digits across policy members.","No","No","No",,,
+stop_reason_concept_id,"Represents the reason the Person left the Plan, if known.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.stop_reason_concept_id (Domain: Plan Stop Reason).","No","No","Yes","CONCEPT",,
+stop_reason_source_value,"The Plan stop reason as it appears in the source data.",varchar(50),,,,,"Source value for plan stop reason.","No","No","No",,,
+stop_reason_source_concept_id,"Stores the OMOP concept_id if the source stop reason is coded in a supported vocabulary.",integer,,,,,"Foreign Key: CONCEPT.stop_reason_source_concept_id.","No","No","Yes","CONCEPT",,

@@ -1,0 +1,13 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+drug_concept_id,"The Concept representing the Branded Drug or Clinical Drug Product.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+ingredient_concept_id,"The Concept representing the active ingredient within the drug product. Combination Drugs will have more than one record, one for each active ingredient.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"
+amount_value,"The numeric value or amount of active ingredient contained within the drug product.",float,,,,,"Amount of active ingredient.","No","No","No",,,
+amount_unit_concept_id,"The Concept representing the Unit of measure for the amount of active ingredient in the drug product.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,"not_null"
+numerator_value,"The concentration of the active ingredient contained within the drug product.",float,,,,,"Concentration of active ingredient.","No","No","No",,,
+numerator_unit_concept_id,"The Concept representing the Unit of measure for the concentration of the active ingredient.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,"not_null"
+denominator_value,"The amount of total liquid (or other divisible product, such as ointment, gel, spray, etc.).",float,,,,,"Total liquid or divisible product amount.","No","No","No",,,
+denominator_unit_concept_id,"The Concept representing the denominator unit for the concentration of active ingredient.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,"not_null"
+box_size,"The number of units of Clinical Branded Drug or Quantified Clinical/Branded Drug contained in a box as dispensed to the patient.",integer,,,,,"Box size as dispensed to the patient.","No","No","No",,,
+valid_start_date,"The date when the Concept was first recorded. Default value is 1-Jan-1970.",date,,,,,"Start date for concept validity.","Yes","No","No",,,"not_null"
+valid_end_date,"The date when the Concept became invalid.",date,,,,,"End date for concept validity.","Yes","No","No",,,"not_null"
+invalid_reason,"Reason the concept was invalidated. Possible values are D (deleted), U (replaced with an update), or NULL when valid_end_date has the default value.",varchar(1),,,,D;U,"Invalidation reason for the concept.","No","No","No",,,

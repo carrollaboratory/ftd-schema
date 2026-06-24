@@ -1,0 +1,23 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+cost_id,"Unique identifier for each cost record.",integer,,,,,"Primary Key for the COST table.","Yes","Yes","No",,,not_null
+cost_event_id,"Identifier of the clinical event record associated with this cost record.",integer,,,,,"Links cost to the corresponding event in the specified cost_domain_id.","Yes","No","No",,,not_null
+cost_domain_id,"Domain of the associated clinical event (e.g., Condition, Drug, Procedure, Visit).",varchar(20),,,,Accepted Domains,"Foreign Key: DOMAIN.domain_id.","Yes","No","Yes","DOMAIN",,not_null
+cost_type_concept_id,"Represents the type of cost (e.g., billed charge, paid amount).",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.cost_type_concept_id.","Yes","No","Yes","CONCEPT",,not_null
+currency_concept_id,"Represents the currency of the monetary amounts recorded in this table.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.currency_concept_id.","No","No","Yes","CONCEPT",,
+total_charge,"Total amount charged for the service or item.",float,,,,,"Total billed charge.","No","No","No",,,
+total_cost,"Total cost incurred for the service or item.",float,,,,,"Overall calculated cost.","No","No","No",,,
+total_paid,"Total amount paid for the service or item.",float,,,,,"Sum of payments from all sources.","No","No","No",,,
+paid_by_payer,"Amount paid by the payer.",float,,,,,"Payment portion covered by payer.","No","No","No",,,
+paid_by_patient,"Amount paid by the patient.",float,,,,,"Total out-of-pocket payment.","No","No","No",,,
+paid_patient_copay,"Amount paid by the patient as copay.",float,,,,,"Patient copayment portion.","No","No","No",,,
+paid_patient_coinsurance,"Amount paid by the patient as coinsurance.",float,,,,,"Patient coinsurance portion.","No","No","No",,,
+paid_patient_deductible,"Amount paid by the patient toward deductible.",float,,,,,"Patient deductible portion.","No","No","No",,,
+paid_by_primary,"Amount paid by the primary payer.",float,,,,,"Primary payer payment amount.","No","No","No",,,
+paid_ingredient_cost,"Ingredient cost paid (typically for drugs).",float,,,,,"Paid drug ingredient cost.","No","No","No",,,
+paid_dispensing_fee,"Dispensing fee paid (typically for drugs).",float,,,,,"Paid pharmacy dispensing fee.","No","No","No",,,
+payer_plan_period_id,"Identifier of the payer plan period associated with this cost record.",integer,,,,,"Optional reference to PAYER_PLAN_PERIOD.payer_plan_period_id.","No","No","No",,,
+amount_allowed,"Maximum reimbursable amount allowed by the payer.",float,,,,,"Allowed amount for reimbursement.","No","No","No",,,
+revenue_code_concept_id,"Concept representing the revenue code for billing classification.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.revenue_code_concept_id.","No","No","Yes","CONCEPT",,
+revenue_code_source_value,"Revenue codes are a method to charge for a class of procedures and conditions in the U.S. hospital system.",varchar(50),,,,,"Source value for revenue code.","No","No","No",,,
+drg_concept_id,"Concept representing the Diagnosis Related Group classification.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.drg_concept_id.","No","No","Yes","CONCEPT",,
+drg_source_value,"Diagnosis Related Groups are US codes used to classify hospital cases into one of approximately 500 groups.",varchar(3),,,,,"Source value for DRG code.","No","No","No",,,

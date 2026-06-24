@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+person_id,,integer,,,,,"Foreign Key: PERSON.person_id","Yes","No","Yes","PERSON",,not_null
+death_date,"The date the person was deceased.",date,,,,,"If the precise date is not known or allowed, use December as the default month and the last day of the month as the default day.","Yes","No","No",,,not_null
+death_datetime,,"datetime",,,,,"Populate with date and time of death if available; otherwise, leave NULL.","No","No","No",,,
+death_type_concept_id,"This is the provenance of the death record, i.e., where it came from.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.death_type_concept_id","No","No","Yes","CONCEPT","Type Concept",
+cause_concept_id,"This is the Standard Concept representing the Person’s cause of death, if available.",integer,,,,,"Foreign Key: CONCEPT.cause_concept_id","No","No","Yes","CONCEPT",,
+cause_source_value,,"varchar(50)",,,,,"Put the source code representing the cause of death, if available.","No","No","No",,,
+cause_source_concept_id,,"integer",,,,,"Foreign Key: CONCEPT.cause_source_concept_id","No","No","Yes","CONCEPT",,

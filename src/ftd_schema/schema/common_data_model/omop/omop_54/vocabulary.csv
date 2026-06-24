@@ -1,0 +1,6 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+vocabulary_id,"Unique identifier for each Vocabulary (e.g., ICD9CM, SNOMED, Visit).",varchar(20),,,,,"Primary Key for the VOCABULARY table.","Yes","Yes","No",,,not_null
+vocabulary_name,"Descriptive name of the vocabulary (e.g., International Classification of Diseases, Ninth Revision, Clinical Modification).",varchar(255),,,,,"Human-readable vocabulary name.","Yes","No","No",,,not_null
+vocabulary_reference,"External reference or documentation link for the vocabulary.",varchar(255),,,,,"URL or citation describing the vocabulary source or download location.","Yes","No","No",,,not_null
+vocabulary_version,"Version of the vocabulary as indicated by the source.",varchar(255),,,,,"Source-reported vocabulary version.","No","No","No",,,
+vocabulary_concept_id,"Concept identifier representing the vocabulary record.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,not_null

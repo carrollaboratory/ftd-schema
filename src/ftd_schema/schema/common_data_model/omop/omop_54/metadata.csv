@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+metadata_concept_id,"Concept identifier representing the metadata record.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.concept_id (identifies the metadata item).","Yes","No","Yes","CONCEPT",,not_null
+metadata_type_concept_id,"Concept identifier representing the type of metadata.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.concept_id (identifies metadata type).","Yes","No","Yes","CONCEPT",,not_null
+name,"Name of the metadata attribute.",varchar(250),,,,,"Human-readable metadata name.","Yes","No","No",,,not_null
+value_as_string,"Metadata value stored as a string.",varchar(250),,,,,"String representation of metadata value.","No","No","No",,,
+value_as_concept_id,"Concept identifier representing the metadata value when applicable.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.concept_id (used when value is standardized concept).","No","No","Yes","CONCEPT",,
+metadata_date,"Date associated with the metadata record.",date,,,,,"Date-level metadata timestamp.","No","No","No",,,
+metadata_datetime,"Datetime associated with the metadata record.",datetime,,,,,"Datetime-level metadata timestamp.","No","No","No",,,

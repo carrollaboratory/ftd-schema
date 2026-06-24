@@ -1,0 +1,11 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+concept_id,"Unique identifier for each Concept across all domains.",integer,,,,,"Primary Key for the CONCEPT table.","Yes","Yes","No",,,not_null
+concept_name,"Unambiguous, meaningful, and descriptive name for the Concept.",varchar(255),,,,,"Human-readable concept name.","Yes","No","No",,,not_null
+domain_id,"Identifier of the Domain the Concept belongs to.",varchar(20),,,,Accepted Domains,"Foreign Key: DOMAIN.domain_id.","Yes","No","Yes","DOMAIN",,not_null
+vocabulary_id,"Identifier of the Vocabulary from which the Concept originates.",varchar(20),,,,Accepted Vocabularies,"Foreign Key: VOCABULARY.vocabulary_id.","Yes","No","Yes","VOCABULARY",,not_null
+concept_class_id,"Concept class indicating the type or attribute of the Concept (e.g., 'Clinical Drug', 'Ingredient', 'Clinical Finding').",varchar(20),,,,Accepted Concept Classes,"Foreign Key: CONCEPT_CLASS.concept_class_id.","Yes","No","Yes","CONCEPT_CLASS",,not_null
+standard_concept,"Flag indicating whether the Concept is Standard ('S'), Classification ('C'), or non-standard (NULL).",varchar(1),,,,S|C,"Indicates concept usage status in OMOP CDM.","No","No","No",,,
+concept_code,"Identifier of the Concept in the source vocabulary (e.g., SNOMED-CT ID, RxNorm RXCUI). Not unique across vocabularies.",varchar(50),,,,,"Source vocabulary concept code.","Yes","No","No",,,not_null
+valid_start_date,"Date when the Concept became valid. Default is 1970-01-01 if unknown.",date,,,,,"Concept validity start date.","Yes","No","No",,,not_null
+valid_end_date,"Date when the Concept became invalid. Default is 2099-12-31 if still valid.",date,,,,,"Concept validity end date.","Yes","No","No",,,not_null
+invalid_reason,"Reason the Concept was invalidated: 'D' (Deleted), 'U' (Updated), or NULL if valid.",varchar(1),,,,D|U,"Indicates why the concept was deprecated, if applicable.","No","No","No",,,

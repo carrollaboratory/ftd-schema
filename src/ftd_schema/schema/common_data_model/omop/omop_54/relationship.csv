@@ -1,0 +1,7 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+relationship_id,"The type of relationship captured by the relationship record.",varchar(20),,,,,"Primary Key for the RELATIONSHIP table.","Yes","Yes","No",,,"not_null"
+relationship_name,"The name of the relationship.",varchar(255),,,,,"Human-readable name for the relationship.","Yes","No","No",,,"not_null"
+is_hierarchical,"Defines whether a relationship organizes concepts into classes or hierarchies. Values are 1 for hierarchical relationship or 0 if not.",varchar(1),,,,1;0,"Indicates if the relationship is hierarchical.","Yes","No","No",,,"not_null"
+defines_ancestry,"Defines whether a hierarchical relationship contributes to the concept_ancestor table. Valid values are 1 or 0.",varchar(1),,,,1;0,"Indicates if the relationship contributes to concept_ancestor.","Yes","No","No",,,"not_null"
+reverse_relationship_id,"The identifier for the relationship used to define the reverse relationship between two concepts.",varchar(20),,,,,"Defines reverse relationship between concepts.","Yes","No","No",,,"not_null"
+relationship_concept_id,"A foreign key that refers to an identifier in the CONCEPT table for the unique relationship concept.",integer,,,,Accepted Concepts,"Foreign Key: CONCEPT.concept_id.","Yes","No","Yes","CONCEPT",,"not_null"

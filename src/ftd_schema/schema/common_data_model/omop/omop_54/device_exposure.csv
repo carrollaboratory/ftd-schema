@@ -1,0 +1,20 @@
+variable_name,description,data_type,min,max,units,enumerations,comment,Required,Primary Key,Foreign Key,FK Table,FK Domain,tests
+device_exposure_id,"Unique identifier for a person's exposure to a foreign physical object or instrument.",integer,,,,,"Primary Key for the DEVICE_EXPOSURE table.","Yes","Yes","No",,,"not_null"
+person_id,"Unique identifier for the person associated with the device exposure.",integer,,,,,"Foreign Key: PERSON.person_id.","Yes","No","Yes","PERSON",,"not_null"
+device_concept_id,"Standard concept mapped from the source concept ID representing the foreign object or instrument.",integer,,,,,"Foreign Key: CONCEPT.concept_id (Device domain).","Yes","No","Yes","CONCEPT","Device","not_null"
+device_exposure_start_date,"Start date of the device exposure, e.g., implantation, prescription, or administration.",date,,,,,"Start date of the device exposure.","Yes","No","No",,,"not_null"
+device_exposure_start_datetime,"Start datetime of the device exposure. Convention is to set time to midnight if unavailable.",datetime,,,,,"Start datetime of the device exposure.","No","No","No",,,
+device_exposure_end_date,"End date of the device exposure, if available.",date,,,,,"End date or discontinuation date of the device exposure.","No","No","No",,,
+device_exposure_end_datetime,"End datetime of the device exposure. Convention is to set time to midnight if unavailable.",datetime,,,,,"End datetime of the device exposure.","No","No","No",,,
+device_type_concept_id,"Concept ID representing the provenance of the device record (e.g., claims, EHR).",integer,,,,,"Foreign Key: CONCEPT.concept_id (Type Concept).","Yes","No","Yes","CONCEPT","Type Concept","not_null"
+unique_device_id,"Unique Device Identification (UDI-DI) number for FDA-regulated devices, if available.",varchar(255),,,,,"UDI-DI number for the device.","No","No","No",,,
+production_id,"Production Identifier (UDI-PI) portion of the Unique Device Identification.",varchar(255),,,,,"Production Identifier for the device.","No","No","No",,,
+quantity,"Quantity of device exposure. Defaults to 1 if omitted in the source data.",integer,,,,,"Quantity of device exposure.","No","No","No",,,
+provider_id,"Provider associated with the device exposure (e.g., prescribing or implanting provider).",integer,,,,,"Foreign Key: PROVIDER.provider_id.","No","No","Yes","PROVIDER",,
+visit_occurrence_id,"Visit during which the device was prescribed or given.",integer,,,,,"Foreign Key: VISIT_OCCURRENCE.visit_occurrence_id.","No","No","Yes","VISIT_OCCURRENCE",,
+visit_detail_id,"Visit Detail during which the device was prescribed or given.",integer,,,,,"Foreign Key: VISIT_DETAIL.visit_detail_id.","No","No","Yes","VISIT_DETAIL",,
+device_source_value,"Verbatim value from the source data representing the device exposure.",varchar(50),,,,,"Source-provided device exposure value.","No","No","No",,,
+device_source_concept_id,"Concept ID representing the device source value, not necessarily standard.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
+unit_concept_id,"Concept ID representing the unit of the device (e.g., mL for blood transfusions).",integer,,,,,"Foreign Key: CONCEPT.concept_id (Unit domain).","No","No","Yes","CONCEPT","Unit",
+unit_source_value,"Verbatim value from the source data representing the unit of the device.",varchar(50),,,,,"Source-provided unit value for the device.","No","No","No",,,
+unit_source_concept_id,"Concept ID representing the unit source value, not necessarily standard.",integer,,,,,"Foreign Key: CONCEPT.concept_id.","No","No","Yes","CONCEPT",,
