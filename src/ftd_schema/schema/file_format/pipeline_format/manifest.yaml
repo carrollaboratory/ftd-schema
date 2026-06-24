@@ -15,8 +15,18 @@ versions:
     notes: |
       Initial release of pipeline format schema.
       Defines structure for data dictionaries processed by FTD pipeline tools.
-      Supported data types: string, integer, number, boolean, enumeration, date
-      Includes validation for variable names, enumerations, numeric constraints.
+
+    deprecated: false
+
+  - tag: "v2.0.0"
+    directory: "v2.0.0"
+    version: "v2.0.0"
+    released: "2026-06-24"
+    status: stable
+    breaking_changes: []
+    notes: |
+      An upgraded version of 1.0 that supports additional data types and validation rules. 
+      All compatibility with 1.0 is maintained, but new features are added to support more complex data structures and relationships.
     deprecated: false
 
 compatibility:
