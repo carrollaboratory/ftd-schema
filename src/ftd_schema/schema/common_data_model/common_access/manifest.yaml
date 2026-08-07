@@ -1,0 +1,14 @@
+schema_type: data_dictionaries
+schema_name: common_access_model
+description: Common Access CDM data dictionary bundle
+repository: ftd-schema
+owner: ftd
+versions:
+- tag: v
+  directory: v
+  version: v
+  released: ''
+  status: stable
+  breaking_changes: []
+  notes: Imported via ftd-dd from this commit 49d3368. Not a versioned release, but a snapshot for necessary pipeline work.
+  deprecated: false

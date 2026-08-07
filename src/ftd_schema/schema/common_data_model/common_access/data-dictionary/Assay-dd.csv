@@ -1,0 +1,7 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+assay_id,The unique identifier for the Assay.,string,,,,,
+assay_type,The type of assay performed.,enumeration,,,,,Type of assays performed
+assay_source,The original description of the Assay performed.,string,,,,,
+activity_definition_id,Unique identifier for this Activity Definition.,string,,,,,Foreign Key: ActivityDefinition.activity_definition_id
+access_policy_id,Global identifier for the access policy that applies to this row of data.,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+study_id,INCLUDE Global ID for the study,integer,,,,,Foreign Key: Study.id
