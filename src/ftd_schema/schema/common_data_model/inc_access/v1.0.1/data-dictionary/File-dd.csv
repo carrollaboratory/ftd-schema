@@ -1,0 +1,15 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+file_id,Unique identifier for this File.,string,,,,,
+filename,The name of the file.,string,,,,,
+format,The format of the file.,enumeration,,,,,Data formats from the EDAM ontology.
+file_extension,Typically a 3-4 letter code at the end of a filename that identifies the file format. Empty string for no extension.,string,,,,,
+data_category,"General category of data in this Record (e.g. Clinical, Genomics, etc)",enumeration,,,,unharmonized_demographic_clinical_data=Unharmonized Demographic/Clinical Data;harmonized_demographic_clinical_data=Harmonized Demographic/Clinical Data;genomics=Genomics;transcriptomics=Transcriptomics;epigenomics=Epigenomics;proteomics=Proteomics;metabolomics=Metabolomics;cognitive_behavioral=Cognitive/Behavioral;immune_profiling=Immune Profiling;imaging=Imaging;microbiome=Microbiome;fitness=Fitness;physical_activity=Physical Activity;other=Other;sleep_study=Sleep Study,
+data_type,The type of data within this file.,enumeration,,,,,Data types from the EDAM ontology.
+size,"Size of the file, in Bytes. May require BigInt or similar.",integer,,,UCUM:By,,
+internal_uri,URI/URL for internal access to the data. May be temporary.,string,,,,,
+release_uri,URI/URL for controlled or open access to the data.,string,,,,,
+drs_uri,DRS location to access the data.,string,,,,,
+storage_class,"Storage class of the object, reflecting cost and access characteristics.",string,,,,,
+availability,Is or was this file available to users?,enumeration,,,,"snomed_ct:103328004=The file is available to users, authorization permitting.;snomed_ct:103329007=The file is not available to users.",
+access_policy_id,Global identifier for the access policy that applies to this row of data.,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+study_id,INCLUDE Global ID for the study,integer,,,,,Foreign Key: Study.id

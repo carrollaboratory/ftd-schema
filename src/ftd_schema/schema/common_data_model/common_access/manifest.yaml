@@ -8,7 +8,7 @@ versions:
   directory: v
   version: v
   released: ''
-  status: stable
+  status: beta
   breaking_changes: []
   notes: Imported via ftd-dd from this commit 49d3368. Not a versioned release, but a snapshot for necessary pipeline work.
   deprecated: false

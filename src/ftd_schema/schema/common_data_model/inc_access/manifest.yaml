@@ -17,6 +17,16 @@ versions:
       - include-access-model repo is not setup with the release artifacts at this time, therefore, the data dictionaries were placed manually.
     deprecated: false
 
+  - tag: "v1.0.1"
+    directory: "v1.0.1"
+    released: ""
+    status: beta
+    breaking_changes: []
+    notes: |
+      - This release includes include access data dictionaries and commonDM dds(49d3368).
+      - Neither model is a versioned release, but a snapshot for necessary pipeline work.
+    deprecated: false
+
 compatibility:
   tools:
     - include-dbt-sandbox
