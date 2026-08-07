@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+access_policy_id,Global identifier for the access policy that applies to this row of data.,string,,,,,
+data_use_accession,"Accession used to provision access to the record, eg, a dbGaP phsID.",string,,,,,
+data_use_permission,Broad category of restrictions on data use.,enumeration,,,,,Data Use Ontology (DUO) terms for data use permissions.
+data_use_modifier,Additional modifiers that limit data use.,enumeration,,,,,Data Use Ontology (DUO) terms for data use modifiers.
+disease_limitation,"If the access is limited to a specific disease purpose, it is specified here.",string,,,,,
+access_description,Any additional information to support access requests.,string,,,,,
+website,Website with more information about this entity.,string,,,,,
