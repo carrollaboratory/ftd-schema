@@ -1,0 +1,4 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+id,,integer,,,,,
+hash_type,"The type of file hash, eg, md5",enumeration,,,,md5=MD5;etag=ETag;sha1=SHA-1,
+hash_value,The value of the file hash,string,,,,,

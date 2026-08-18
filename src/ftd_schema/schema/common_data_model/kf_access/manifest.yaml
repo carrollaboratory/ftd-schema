@@ -1,0 +1,22 @@
+---
+schema_type: data_dictionaries
+schema_name: access
+description: Access CDM data dictionary bundle
+repository: ftd-schema
+owner: ftd
+
+versions:
+  - tag: "v0.5.1"
+    directory: "v1.0.0"
+    released: "2026-08-18"
+    status: beta
+    breaking_changes: []
+    notes: |
+      - Initial release of kf access. I believe it uses common-data-model v0.5.1(c498d27726ee0f0420a398c880cc995f8f8a62c1)
+    deprecated: false
+
+
+compatibility:
+  tools:
+    - include-dbt-sandbox
+
