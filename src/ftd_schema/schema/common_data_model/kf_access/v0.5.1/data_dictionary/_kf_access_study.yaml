@@ -1,0 +1,146 @@
+model_name: kf_access
+model_prefix: kf_access
+format: ftd_dd
+data_dictionary:
+  accesspolicy:
+    identifier: AccessPolicy-dd.csv
+  activitydefinition:
+    identifier: ActivityDefinition-dd.csv
+  activitydefinition_external_id:
+    identifier: ActivityDefinition_external_id-dd.csv
+  aliquot:
+    identifier: Aliquot-dd.csv
+  aliquot_external_id:
+    identifier: Aliquot_external_id-dd.csv
+  any:
+    identifier: Any-dd.csv
+  assay:
+    identifier: Assay-dd.csv
+  assay_external_id:
+    identifier: Assay_external_id-dd.csv
+  assay_file_id:
+    identifier: Assay_file_id-dd.csv
+  assay_sample_id:
+    identifier: Assay_sample_id-dd.csv
+  assay_subject_id:
+    identifier: Assay_subject_id-dd.csv
+  biospecimencollection:
+    identifier: BiospecimenCollection-dd.csv
+  biospecimencollection_external_id:
+    identifier: BiospecimenCollection_external_id-dd.csv
+  concept:
+    identifier: Concept-dd.csv
+  doi:
+    identifier: DOI-dd.csv
+  doi_external_id:
+    identifier: DOI_external_id-dd.csv
+  dataset:
+    identifier: Dataset-dd.csv
+  dataset_file_id:
+    identifier: Dataset_file_id-dd.csv
+  dataset_publication:
+    identifier: Dataset_publication-dd.csv
+  demographics:
+    identifier: Demographics-dd.csv
+  demographics_external_id:
+    identifier: Demographics_external_id-dd.csv
+  demographics_race:
+    identifier: Demographics_race-dd.csv
+  encounter:
+    identifier: Encounter-dd.csv
+  encounterdefinition:
+    identifier: EncounterDefinition-dd.csv
+  encounterdefinition_activity_definition_id:
+    identifier: EncounterDefinition_activity_definition_id-dd.csv
+  encounterdefinition_external_id:
+    identifier: EncounterDefinition_external_id-dd.csv
+  encounter_external_id:
+    identifier: Encounter_external_id-dd.csv
+  family:
+    identifier: Family-dd.csv
+  familymembership:
+    identifier: FamilyMembership-dd.csv
+  familymembership_external_id:
+    identifier: FamilyMembership_external_id-dd.csv
+  familyrelationship:
+    identifier: FamilyRelationship-dd.csv
+  familyrelationship_external_id:
+    identifier: FamilyRelationship_external_id-dd.csv
+  family_external_id:
+    identifier: Family_external_id-dd.csv
+  file:
+    identifier: File-dd.csv
+  filehash:
+    identifier: FileHash-dd.csv
+  file_external_id:
+    identifier: File_external_id-dd.csv
+  file_hash:
+    identifier: File_hash-dd.csv
+  file_sample_id:
+    identifier: File_sample_id-dd.csv
+  file_subject_id:
+    identifier: File_subject_id-dd.csv
+  investigator:
+    identifier: Investigator-dd.csv
+  investigator_external_id:
+    identifier: Investigator_external_id-dd.csv
+  publication:
+    identifier: Publication-dd.csv
+  publication_external_id:
+    identifier: Publication_external_id-dd.csv
+  record_external_id:
+    identifier: Record_external_id-dd.csv
+  sample:
+    identifier: Sample-dd.csv
+  sample_external_id:
+    identifier: Sample_external_id-dd.csv
+  sample_processing:
+    identifier: Sample_processing-dd.csv
+  sample_storage_method:
+    identifier: Sample_storage_method-dd.csv
+  study:
+    identifier: Study-dd.csv
+  studymetadata:
+    identifier: StudyMetadata-dd.csv
+  studymetadata_clinical_data_source_type:
+    identifier: StudyMetadata_clinical_data_source_type-dd.csv
+  studymetadata_data_category:
+    identifier: StudyMetadata_data_category-dd.csv
+  studymetadata_external_id:
+    identifier: StudyMetadata_external_id-dd.csv
+  studymetadata_participant_lifespan_stage:
+    identifier: StudyMetadata_participant_lifespan_stage-dd.csv
+  studymetadata_research_domain:
+    identifier: StudyMetadata_research_domain-dd.csv
+  studymetadata_study_design:
+    identifier: StudyMetadata_study_design-dd.csv
+  study_contact:
+    identifier: Study_contact-dd.csv
+  study_external_id:
+    identifier: Study_external_id-dd.csv
+  study_funding_source:
+    identifier: Study_funding_source-dd.csv
+  study_principal_investigator:
+    identifier: Study_principal_investigator-dd.csv
+  study_program:
+    identifier: Study_program-dd.csv
+  study_publication:
+    identifier: Study_publication-dd.csv
+  subject:
+    identifier: Subject-dd.csv
+  subjectassertion:
+    identifier: SubjectAssertion-dd.csv
+  subjectassertion_concept:
+    identifier: SubjectAssertion_concept-dd.csv
+  subjectassertion_external_id:
+    identifier: SubjectAssertion_external_id-dd.csv
+  subjectassertion_value_concept:
+    identifier: SubjectAssertion_value_concept-dd.csv
+  subject_external_id:
+    identifier: Subject_external_id-dd.csv
+  virtualbiorepository:
+    identifier: VirtualBiorepository-dd.csv
+  virtualbiorepository_contact:
+    identifier: VirtualBiorepository_contact-dd.csv
+  virtualbiorepository_external_id:
+    identifier: VirtualBiorepository_external_id-dd.csv

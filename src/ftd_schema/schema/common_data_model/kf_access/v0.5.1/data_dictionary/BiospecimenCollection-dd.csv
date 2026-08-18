@@ -1,0 +1,10 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+biospecimen_collection_id,Unique identifier for this Biospecimen Collection.,string,,,,,
+age_at_collection,The age at which this biospecimen was collected in decimal years.,number,,,UCUM:a,,
+method,The approach used to collect the biospecimen.,enumeration,,,,,The approach used to collect the biospecimen. [LOINC](https://loinc.org) is recommended.
+site,The location of the specimen collection.,enumeration,,,,,The location of the specimen collection. [SNOMED Body Site](https://hl7.org/fhir/R4B/valueset-body-site.html) is recommended.
+spatial_qualifier,Qualifier that further refine the specific location of biospecimen collection,enumeration,,,,,Any spatial/location qualifiers.
+laterality,Laterality that further refine the specific location of biospecimen collection,enumeration,,,,,Laterality information for the site
+encounter_id,Unique identifier for this Encounter.,string,,,,,Foreign Key: Encounter.encounter_id
+access_policy_id,Global identifier for the access policy that applies to this row of data.,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+study_id,INCLUDE Global ID for the study,string,,,,,Foreign Key: Study.study_id

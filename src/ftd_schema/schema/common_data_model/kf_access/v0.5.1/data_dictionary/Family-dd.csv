@@ -1,0 +1,8 @@
+variable_name,description,data_type,min,max,units,enumerations,comment
+family_id,Global ID for the Family,string,,,,,
+family_type,"Describes the 'type' of study family, eg, trio.",enumeration,,,,control_only=Control Only;duo=Duo;proband_only=Proband Only;trio=Trio (2 parents and affected child);trio_plus=2 Parents and 2 or more children,
+family_description,"Free text describing the study family, such as potential inheritance or details about consanguinity",string,,,,,
+consanguinity,Is there known or suspected consanguinity in this study family?,enumeration,,,,not_suspected=Not suspected;suspected=Suspected;known_present=Known Present;unknown=Unknown,
+family_study_focus,"The specific focus of the investigation, eg, a condition.",string,,,,,
+access_policy_id,Global identifier for the access policy that applies to this row of data.,string,,,,,Foreign Key: AccessPolicy.access_policy_id
+study_id,INCLUDE Global ID for the study,string,,,,,Foreign Key: Study.study_id
